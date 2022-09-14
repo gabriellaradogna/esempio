@@ -1,0 +1,51 @@
+#company
+company.headertitle=Sito Noleggio Auto
+company.headersubtitle=Pannello Noleggio 
+company.footer=Noleggio, Inc
+
+#label
+label.customersmanagement=Gestione Clienti
+label.ordersmanagement=Gestione Ordinativi
+label.login=Login
+label.home=Home Page
+label.carsscatalog=Catalogo Automobili
+label.carsmanagement=Gestione Catalogo Automobili
+label.description=Descrizione
+label.price=Prezzo
+label.standardform=Form Standard
+label.thymeleafform=Form Thymeleaf
+label.clientform=Form Client
+label.carcard=Scheda Automobile 
+label.carimage=Immagine Automobile
+label.name=Nome
+label.surname=Cognome
+label.telefonnumber=Numero di telefono:
+label.mailaddress=Indirizzo Mail:
+label.street=Via
+label.civic=Civico:
+label.town=Città
+label.cap=Cap:
+label.province=Provincia:
+label.orderstart=Inizio Noleggio
+label.orderend=Fine Noleggio
+label.orderamount=Importo Totale
+label.order=Ordine
+label.card=Automobile 
+label.italian=Italiano
+label.english=Inglese
+label.category=Categoria
+label.userlogin=Accesso area Utente
+label.userregistration=Registrazione Utente
+label.username=Username
+label.password=Password
+label.itemdeleteconfirm=Sei sicuro di voler eliminare?
+
+#button
+btn.edit=Modifica
+btn.delete=Elimina
+btn.register=Registra
+btn.back=Indietro
+btn.confirm=Conferma
+btn.createpdf=Pdf
+btn.search=Cerca
+btn.login=Controllo Credenziali
