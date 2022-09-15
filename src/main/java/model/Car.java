@@ -33,13 +33,13 @@ public class Car implements Serializable{
 	@Column(name = "model")
 	private String model;
 	
-	@Column(name = "powerSupply")
+	@Column(name = "power_supply")
 	private String powerSupply;
 	
 	@Column(name = "displacement")
 	private String displacement;
 	
-	@Column(name = "number_seat")
+	@Column(name = "number_seats")
 	private String numberSeats;
 	
 	@Column(name = "color")
