@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <link rel="stylesheet" th:href="@{/static/css/login.css}">
+</head>
+<body>
+<div id="contenitore">
+  <form method="get" action="/login"name="form1">
+      <fieldset>
+        <legend>Login</legend>
+        <h1>Username</h1><input type="text" name="username" class="testi"required placeholder="Username" /><br/>
+        <h1>Password</h1><input type="password" name="password" class="testi" required placeholder="Password"/><br/>
+        <a href="#">Password dimenticata?</a></br><br/>
+        <input type="submit" name="submit" class="pulsante" value="Accedi"/>
+      </fieldset>
+  </form>
+
+    <h1>Non sei registrato? Crea subito un account</h1>
+  <form method="post" action="/signin"name="form2">
+    <fieldset>
+      <legend>Registrazione</legend>
+        <h1>Nome</h1><input type="text" name="nome" class="testi"required placeholder="Nome" /><br/>
+        <h1>Cognome</h1><input type="text" name="cognome" class="testi" required placeholder="Cognome"/><br/>
+        <h1>Genere</h1><input type="radio" name="genere" class="radio" value="m"/>Maschio
+        <input type="radio" name="genere" class="radio" value="f"/>Femmina
+        <input type="radio" name="genere" class="radio" value="a" checked/>Altro<br/>
+        <h1>Data di nascita</h1><input type="date" name="data" /><br/>
+        <h1>E-mail</h1><input type="text" name="enail" class="testi" required placeholder="E-mail"/>
+        <h1>Scegli username</h1><input type="text" name="enail" class="testi" required placeholder="E-mail"/>
+        <h1>Scegli password</h1><input type="password" name="password" class="testi" required placeholder="Password"/><br/><br/>
+        <input type="submit" name="submit" class="pulsante" value="Crea account"/>
+    </fieldset>
+  </form>
+</div>
+</body>
+</html>
