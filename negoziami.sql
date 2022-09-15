@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Set 14, 2022 alle 17:49
+-- Creato il: Set 15, 2022 alle 10:44
 -- Versione del server: 10.4.24-MariaDB
 -- Versione PHP: 8.1.6
 
@@ -51,7 +51,7 @@ INSERT INTO `cars` (`id_car`, `model`, `brand`, `category`, `power_supply`, `dis
 (3, 'Bravo', 'Fiat', 'Berlina', 'Benzina', '1.4', '5', 'Rosso scuro', 90.00),
 (4, 'Tipo', 'Fiat', 'Berlina', 'Diesel', '1.4 Mjt', '5', 'Grigio', 115.00),
 (5, 'A4', 'Audi', 'Berlina', 'Benzina', '3.5 Tfsi', '5', 'Argento', 350.00),
-(6, 'Classe E', 'Mercedes', 'Berlina', 'Diesel', '4.0 V8', '5', 'Azzurro', 530.00),
+(6, 'Classe E', 'Mercedes', 'Berlina', 'Diesel', '4.0 V8', '5', 'Argento', 530.00),
 (7, 'Sandero', 'Dacia', 'Utilitaria', 'Benzina', '1.2', '5', 'Blu', 105.00),
 (8, 'C1', 'Citroen', 'Utilitaria', 'Diesel', '1.4 Hdi', '5', 'Grigio scuro', 85.00),
 (9, 'Picanto', 'Kia', 'Utilitaria', 'Benzina', '1.2', '5', 'Bianco', 135.00),
