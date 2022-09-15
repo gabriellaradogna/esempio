@@ -17,8 +17,10 @@ import model.Car;
 @RequestMapping(path = {"/", "/index", "/home"})
 public class IndexController {
 	
+	
 	@Autowired
 	CarDao carDao;
+	
 	
 	@GetMapping
 	public String getPage(Model model, @RequestParam(value = "category", required = false) String category)
@@ -27,12 +29,11 @@ public class IndexController {
 		
 		if(category == null)
 			cars = carDao.findAll();
-		else
+		else 
 			cars = carDao.findByCategory(category);
 		
 		model.addAttribute("cars", cars);
 		return "index";
 	}
-
 
 }
