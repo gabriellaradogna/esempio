@@ -20,7 +20,7 @@ public class IndexController {
 	
 	@Autowired
 	CarDao carDao;
-	
+
 	
 	@GetMapping
 	public String getPage(Model model, @RequestParam(value = "category", required = false) String category)
