@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="it" class="h-100">
+<head>
+<meta charset="ISO-8859-1">
+<title>Index Prova</title>
+</head>
+<body>
+
+<div th:each = "car : ${cars}">
+
+	<div th:text = "${car.brand} + ${car.color}" style = ""> </div>
+	<div th:text = "${car.model}"> </div>
+</div>
+</body>
+</html>
