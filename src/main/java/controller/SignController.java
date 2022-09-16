@@ -54,7 +54,7 @@ public class SignController {
 			@RequestParam("password") String password
 			)
 	{
-		return
+		return "userarea";
 	}
 
 }
