@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html xmlns:th="http://www.thymeleaf.org" lang="it" class="h-100">
 <head>
   <meta charset="UTF-8">
   <title>Login</title>
@@ -8,7 +8,7 @@
 </head>
 <body>
 <div id="contenitore">
-  <form method="get" action="/login"name="form1">
+  <form method="post" action="sign/login"name="form1">
       <fieldset>
         <legend>Login</legend>
         <h1>Username</h1><input type="text" name="username" class="testi"required placeholder="Username" /><br/>
@@ -19,7 +19,7 @@
   </form>
 
     <h1>Non sei registrato? Crea subito un account</h1>
-  <form method="post" action="/signin"name="form2">
+  <form method="post" action="sign/signup"name="form2">
     <fieldset>
       <legend>Registrazione</legend>
         <h1>Nome</h1><input type="text" name="nome" class="testi"required placeholder="Nome" /><br/>
@@ -28,8 +28,8 @@
         <input type="radio" name="genere" class="radio" value="f"/>Femmina
         <input type="radio" name="genere" class="radio" value="a" checked/>Altro<br/>
         <h1>Data di nascita</h1><input type="date" name="data" /><br/>
-        <h1>E-mail</h1><input type="text" name="enail" class="testi" required placeholder="E-mail"/>
-        <h1>Scegli username</h1><input type="text" name="enail" class="testi" required placeholder="E-mail"/>
+        <h1>E-mail</h1><input type="text" name="email" class="testi" required placeholder="E-mail"/>
+        <h1>Scegli username</h1><input type="text" name="username" class="testi" required placeholder="E-mail"/>
         <h1>Scegli password</h1><input type="password" name="password" class="testi" required placeholder="Password"/><br/><br/>
         <input type="submit" name="submit" class="pulsante" value="Crea account"/>
     </fieldset>
