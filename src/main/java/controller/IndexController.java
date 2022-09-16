@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import dao.CarDao;
+import dao.UserDao;
 import model.Car;
 
 @Controller
@@ -20,6 +21,9 @@ public class IndexController {
 	
 	@Autowired
 	CarDao carDao;
+	
+	@Autowired
+	UserDao userDao;
 
 	
 	@GetMapping
@@ -32,6 +36,7 @@ public class IndexController {
 		else 
 			cars = carDao.findByCategory(category);
 		
+		System.out.println(userDao.findAll());
 		model.addAttribute("cars", cars);
 		return "index";
 	}
