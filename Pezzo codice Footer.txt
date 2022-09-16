@@ -1,0 +1,26 @@
+PEZZO DI CODICE DA AGGIUNGERE ALL'INTERNO DEL TAG <FOOTER>..</FOOTER>
+
+<div class="row riga_footer">
+      <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+        <div class="row text-center">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">©CarRent è un marchio registrato</div>
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">Tutti i diritti riservati</div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+        <ul class="list-group list-unstyled">
+          <li>Hai delle curiosita?</li>
+          <li>Contattaci alla seguente mail: <a href="mailto::CarRent@gmail.com">CarRent@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 d-inline-flex justify-content-center">
+        <div class="row text-center">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">Seguiteci sui nostri social:</div>
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-inline-flex justify-content-center">
+            <div><a href="#"><img src="facebook.jpg" class="facebook"/></a></div>
+            <div><a href="#"><img src="instagram.jpg" class="instagram"/></a></div>
+            <div><a href="#"><img src="whatsapp.jpg" class="whatsapp"/></a></div>
+          </div>
+        </div>
+      </div>
+    </div>

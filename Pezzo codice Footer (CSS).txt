@@ -1,0 +1,29 @@
+PEZZO DI CODICE DA AGGIUNGERE NEL CSS
+
+.specifiche{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.text{
+  font-size: 15px;
+}
+
+.facebook{
+  max-width: 35px;
+  margin-left: 10px;
+}
+
+.instagram{
+  max-width: 35px;
+  margin-left: 10px;
+}
+
+.whatsapp{
+  max-width: 35px;
+  margin-left: 10px;
+}
+
+.riga_footer{
+  margin-top: 10px;
+}
