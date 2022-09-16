@@ -10,19 +10,32 @@
 
 header {
   width: 100%;
-  height: 200px;
+  height: 300px;
   margin: auto;
   text-align: center;
-  border: 1px solid red;
 }
-
+#img_logo{
+  width: 200px;
+  height: 150px;
+  margin-top: 8px;
+}
+#video_header{
+  width: 600px;
+  height: 100px;
+}
+#img_ragazzo{
+  width: 350px;
+  height: 250px;
+  margin-top: 50px;
+  margin-left: 0px;
+}
 
 main{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  height: 800%;
+  height: 80%;
   border: 1px solid brown;
 }
 
@@ -30,7 +43,20 @@ aside {
   position: relative;
   width: 20%;
   height: 800px;
-  border: 1px dashed blue;
+  border: 2px solid black;
+}
+aside ul{
+  list-style: none;
+}
+aside li{
+}
+aside a{
+  text-decoration-line: none;
+  color: #51585e;
+  font-size: x-large;
+}
+.img_aside{
+  width: 30px;
 }
 
 #contenitore2{
@@ -41,10 +67,10 @@ nav {
   position: relative;
   width: 100%;
   height: 60px;
-  border: 1px solid black;
   display: block;
+  background-color: black;
 }
-ul{
+nav ul{
   width: 100%;
   height: 60px;
   display: flex;
@@ -55,21 +81,30 @@ ul{
   font-size: medium;
   font-family: "Lucida Grande";
 }
-li {
-  width: 25%;
+nav li {
+  width: auto;
   height: 60px;
   text-align: center;
   line-height: 55px; /* solo così sono riuscita a centrare la scritta*/
   list-style: none;
-  border: 1px dotted black;
   padding-top: 0;
   padding-bottom: 0;
 }
-a {
-  text-decoration-line: none;
+#nav_li1, #nav_li2, #nav_li4, #nav_li5{
+  width: 17%;
 
 }
+#nav_li3{
+  width: 22%;
 
+}
+nav a {
+  color: white;
+  text-decoration: none!important;
+}
+a:hover{
+  text-decoration: none;
+}
 gallery {
   width: 100%;
   height: 740px;
@@ -79,12 +114,12 @@ gallery {
   overflow-y: scroll;
 }
 
-.galleria{
+/*.scheda, .immagine, .info{
   width: 46%;
   height: 38%;
   margin: 2% auto;
   border: 2px solid grey;
-}
+}*/
 
 footer{
   height: 100px;
