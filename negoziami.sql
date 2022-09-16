@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Set 15, 2022 alle 10:44
+-- Creato il: Set 16, 2022 alle 15:37
 -- Versione del server: 10.4.24-MariaDB
 -- Versione PHP: 8.1.6
 
@@ -105,6 +105,7 @@ CREATE TABLE `users` (
   `last_name` varchar(20) DEFAULT NULL,
   `fiscal_code` varchar(16) DEFAULT NULL,
   `telephone` varchar(10) DEFAULT NULL,
+  `mail` varchar(50) DEFAULT NULL,
   `address` varchar(50) DEFAULT NULL,
   `locality` varchar(50) DEFAULT NULL,
   `province` varchar(2) DEFAULT NULL,
@@ -119,12 +120,12 @@ CREATE TABLE `users` (
 -- Dump dei dati per la tabella `users`
 --
 
-INSERT INTO `users` (`id_user`, `first_name`, `last_name`, `fiscal_code`, `telephone`, `address`, `locality`, `province`, `postal_code`, `business_name`, `vat_number`, `username`, `password`) VALUES
-(1, 'Francesco', 'Verdi', 'VRDFNC94E22F839U', '3206491043', 'Via Giardino dei Fiori, 19', 'Bari', 'BA', '70129', NULL, NULL, NULL, NULL),
-(2, 'Giuseppe', 'Bianchi', 'BNCGPP00D22F839B', '3210457698', 'Via dei Colombi, 78', 'Napoli', 'NA', '80100', NULL, NULL, 'Peppe33', 'password00'),
-(3, 'Carla', 'Neri', 'NRECRL70P28H501Y', '3784569803', 'Via dei Partigiani, 18', 'Roma', 'RM', '00010', 'CarServ S.r.l', '07643520567', NULL, NULL),
-(4, 'Paola', 'Gialli', 'GLLPLA83M41C352I', '3215648795', 'Via dei Serpenti, 65', 'Bari', 'BA', '70126', NULL, NULL, NULL, NULL),
-(5, 'Gennaro', 'Savastano', 'SVSGNR76M09F839Q', '3485760917', 'Via Furiosi, 65', 'Napoli', 'NA', '80100', NULL, NULL, NULL, NULL);
+INSERT INTO `users` (`id_user`, `first_name`, `last_name`, `fiscal_code`, `telephone`, `mail`, `address`, `locality`, `province`, `postal_code`, `business_name`, `vat_number`, `username`, `password`) VALUES
+(1, 'Francesco', 'Verdi', 'VRDFNC94E22F839U', '3206491043', NULL, 'Via Giardino dei Fiori, 19', 'Bari', 'BA', '70129', NULL, NULL, NULL, NULL),
+(2, 'Giuseppe', 'Bianchi', 'BNCGPP00D22F839B', '3210457698', NULL, 'Via dei Colombi, 78', 'Napoli', 'NA', '80100', NULL, NULL, 'Peppe33', 'password00'),
+(3, 'Carla', 'Neri', 'NRECRL70P28H501Y', '3784569803', NULL, 'Via dei Partigiani, 18', 'Roma', 'RM', '00010', 'CarServ S.r.l', '07643520567', NULL, NULL),
+(4, 'Paola', 'Gialli', 'GLLPLA83M41C352I', '3215648795', NULL, 'Via dei Serpenti, 65', 'Bari', 'BA', '70126', NULL, NULL, NULL, NULL),
+(5, 'Gennaro', 'Savastano', 'SVSGNR76M09F839Q', '3485760917', NULL, 'Via Furiosi, 65', 'Napoli', 'NA', '80100', NULL, NULL, NULL, NULL);
 
 --
 -- Indici per le tabelle scaricate
