@@ -40,8 +40,8 @@ main{
 aside {
   position: relative;
   width: 20%;
-  height: 1000px;
-  border: 1px #51585e solid;
+  border: 2px black solid;
+  border-bottom: 0px;
 }
 aside ul{
   list-style: none;
@@ -68,7 +68,8 @@ aside a:hover {
   margin-bottom: 3px;
 }
 #price{
-  width:75%;
+  width:170px;
+  font-family: Barlow;
 }
 .span_date{
   font-size: 28px;
@@ -76,8 +77,10 @@ aside a:hover {
   color: #51585e;
 }
 .date{
-  width: 44%;
+  width: 130px;
   margin: 2%;
+  font-size: 20px;
+  font-family: Barlow;
 }
 .label_checkbox{
   font-size: 28px;
@@ -140,12 +143,14 @@ gallery {
   overflow-y: scroll;
 }
 
-/*.scheda, .immagine, .info{
+.scheda, .immagine, .info{
+  position:relative;
+  float: left;
   width: 46%;
-  height: 38%;
+  height: 50%;
   margin: 2% auto;
   border: 2px solid grey;
-}*/
+}
 
 footer{
   height: 100px;
@@ -155,6 +160,15 @@ footer{
 }
 #footer{
   padding: 20px;
+  margin: auto;
+}
+#footer_sx{
+  margin: auto;
+  line-height: 200%;
+}
+#footer_center{
+  margin: auto;
+  line-height: 200%;
 }
 
 .specifiche{
@@ -181,7 +195,34 @@ footer{
   margin-left: 10px;
 }
 
+/* - PAGINA SU DI NOI*/
 
+.immagine_strada{
+  background-image: url("strada.jpeg");
+  background-size: cover ;
+  opacity: 0.75;
+  width: 100%;
+  height: 800px;
+  position: relative;
+  text-align: left;
+  color: white;
+  font-family: Barlow;
+  font-size: 25px;
+  font-style: italic;
+  padding: 60px 125px 125px 125px;
+}
+#su_di_noi_h{
+  font-size: 65px;
+  font-weight: normal;
+  text-align: left;
+  text-shadow: -1px 0 #0c4128, 0 1px #0c4128, 1px 0 #0c4128, 0 -1px #0c4128;
+}
+#su_di_noi{
+  color: white;
+  opacity: 0.9;
+  text-align: justify;
+  text-shadow: -1px 0 #0c4128, 0 1px #0c4128, 1px 0 #0c4128, 0 -1px #0c4128;
+}
 @media only screen and (max-width: 986px) {
 
 
