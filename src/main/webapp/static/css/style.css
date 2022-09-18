@@ -5,7 +5,6 @@
   width: 100%;
   /*height: 1500px;*/
   margin: auto;
-  border: 1px solid green;
 }
 
 header {
@@ -36,27 +35,54 @@ main{
   flex-wrap: wrap;
   width: 100%;
   height: 80%;
-  border: 1px solid brown;
 }
 
 aside {
   position: relative;
   width: 20%;
-  height: 800px;
-  border: 2px solid black;
+  height: 1000px;
+  border: 1px #51585e solid;
 }
 aside ul{
   list-style: none;
+  font-family: Barlow;
 }
-aside li{
+.aside_h{
+  font-family: Barlow;
+  color: black;
+  font-size: 33px;
+}
+#aside_li1,#aside_li2,#aside_li3,#aside_li4{
+  line-height: 1.5;
 }
 aside a{
   text-decoration-line: none;
   color: #51585e;
-  font-size: x-large;
+  font-size: 28px;
+}
+aside a:hover {
+  color: #000000;
 }
 .img_aside{
-  width: 30px;
+  width: 45px;
+  margin-bottom: 3px;
+}
+#price{
+  width:75%;
+}
+.span_date{
+  font-size: 28px;
+  font-family: Barlow;
+  color: #51585e;
+}
+.date{
+  width: 44%;
+  margin: 2%;
+}
+.label_checkbox{
+  font-size: 28px;
+  font-family: Barlow;
+  color: #51585e;
 }
 
 #contenitore2{
@@ -75,11 +101,10 @@ nav ul{
   height: 60px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   margin: auto;
   padding: 0;
-  font-size: medium;
-  font-family: "Lucida Grande";
+  font-size: 25px;
+  font-family: Barlow;
 }
 nav li {
   width: auto;
@@ -91,20 +116,21 @@ nav li {
   padding-bottom: 0;
 }
 #nav_li1, #nav_li2, #nav_li4, #nav_li5{
-  width: 17%;
+  width: 19%;
 
 }
 #nav_li3{
-  width: 22%;
+  width: 24%;
 
 }
 nav a {
-  color: white;
+  color: #bcbebf;
   text-decoration: none!important;
 }
-a:hover{
-  text-decoration: none;
+nav a:hover{
+  color: white;
 }
+
 gallery {
   width: 100%;
   height: 740px;
@@ -123,8 +149,38 @@ gallery {
 
 footer{
   height: 100px;
-  border: 2px solid deeppink;
+  background-color: black;
+  font-size: 15px;
+  color: white;
 }
+#footer{
+  padding: 20px;
+}
+
+.specifiche{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.text{
+  font-size: 15px;
+}
+
+#facebook{
+  max-width: 35px;
+  margin-left: 10px;
+}
+
+#instagram{
+  max-width: 35px;
+  margin-left: 10px;
+}
+
+#whatsapp{
+  max-width: 35px;
+  margin-left: 10px;
+}
+
 
 @media only screen and (max-width: 986px) {
 

@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="it" class="h-100">
+<html xmlns:th="http://www.thymeleaf.org" lang="it" class="h-100" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
   <title>Homepage</title>
   <meta name="viewport" content="width=device-width", initial-scale="1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="static/css/style.css" rel="stylesheet"/>
-
+  <link href="https://fonts.googleapis.com/css2?family=Barlow" rel="stylesheet">
+  <script th:src="@{static/javascript/javascript.js}"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 <div id="contenitore">
   <header>
     <img src="static/image/logorent.jpg" id="img_logo">
-    <video id="video_header" autoplay loop>
+    <video id="static/video/video_header" autoplay loop>
       <source src="static/video/macchine2.mp4" type="video/mp4">
     </video>
     <img src="static/image/ragazzo2.png" id="img_ragazzo">
@@ -20,29 +23,60 @@
     <main>
       <aside>
         <ul>
+          <form action="" method="post">
           </br>
-          <h3>Modelli</h3>
-          <li><a href="?category=Utilitaria" style="color:#666666"><img src="static/image/utilitaria.jpg" class="img_aside">&nbsp;&nbsp;Utilitarie</a></li>
-          <li><a href="?category=Berlina" style="color:#666666" ><img src="static/image/Berlina.jpg" class="img_aside">&nbsp;&nbsp;Berlina</a></li>
-          <li><a href="?category=Suv" style="color:#666666" ><img src="static/image/Suv.jpg" class="img_aside">&nbsp;&nbsp;Suv</a></li>
-          <li><a href="?category=Furgone" style="color:#666666" ><img src="static/image/Furgone.jpg" class="img_aside">&nbsp;&nbsp;Furgoni</a></li>
+          <h2 class="aside_h"><strong>Modelli</strong></h2>
+          <div id="aside_li1"><li><a href="#"><img src="static/image/Utilitaria.jpg" class="img_aside">&nbsp;&nbsp;Utilitarie</a></li></div>
+          <div id="aside_li2"><li><a href="#"><img src="static/image/Berlina.jpg" class="img_aside">&nbsp;&nbsp;Berlina</a></li></div>
+          <div id="aside_li3"><li><a href="#"><img src="static/image/Suv.jpg" class="img_aside">&nbsp;&nbsp;Suv</a></li></div>
+          <div id="aside_li4"><li><a href="#"><img src="static/image/Furgone.jpg" class="img_aside">&nbsp;&nbsp;Furgoni</a></li></div>
+          </br>
+          <h2 class="aside_h"><strong>Prezzo giornaliero</strong></h2>
+          <input id="price" type="range" style="color: #51585e" value="24" min="50" max="400" oninput="this.nextElementSibling.value = 'Fino a ' + this.value + '€'">
+          <output id="output_price">Fino a 50 €</output>
           </br>
           </br>
-          <input type="range" id="prezzo" name="volume"
-                 min="50" max="400">
-
-          <label for="prezzo">Prezzo giornaliero</label>
+          <h2 class="aside_h"><strong>Date</strong></h2>
+          <span class="span_date">da</span>&nbsp;&nbsp;
+          <input type="date" class="date" name="trip-start"
+                 value="2022-09-19"
+                 min="2022-09-19" max="2024-12-31"></br>
+          <span class="span_date">a </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="date" class="date" name="trip-start"
+                 value="2022-09-19"
+                 min="2022-09-19" max="2024-12-31">
+          </br>
+          </br>
+          <h2 class="aside_h"><strong>Alimentazione</strong></h2>
+          <input type="checkbox" class="power_supply" name="Benzina" value="Benzina" style="width : 20px; height : 20px;">
+          <label class="label_checkbox">&nbsp; Benzina</label><br>
+          <input type="checkbox" class="power_supply" name="Diesel" value="Diesel" style="width : 20px; height : 20px;">
+          <label class="label_checkbox">&nbsp; Diesel</label><br>
+          <input type="checkbox" class="power_supply" name="Elettrica" value="Elettrica" style="width : 20px; height : 20px;">
+          <label class="label_checkbox">&nbsp; Elettrica</label><br>
+          <input type="checkbox" class="power_supply" name="Gpl" value="Gpl" style="width : 20px; height : 20px;">
+          <label class="label_checkbox">&nbsp; Gpl</label><br>
+          <input type="checkbox" class="power_supply" name="Ibrida" value="Ibrida" style="width : 20px; height : 20px;">
+          <label class="label_checkbox">&nbsp; Ibrida</label>
+          </br>
+          </br>
+          <h2 class="aside_h"><strong>Numero sedute</strong></h2>
+          <input type="checkbox" class="number_seats" name="number_seats" value="4seats" style="width : 20px; height : 20px;">
+          <label class="label_checkbox">&nbsp; 4</label><br>
+          <input type="checkbox" class="number_seats" name="number_seats" value="5seats" style="width : 20px; height : 20px;">
+          <label class="label_checkbox">&nbsp; 5</label>
+          </form>
         </ul>
       </aside>
 
       <div id="contenitore2">
         <nav>
           <ul>
-            <div id="nav_li1"><li><a href="index" style="color:#FFFFFF">Homepage</a></li></div>
-            <div id="nav_li2"><li><a href="#" style="color:#FFFFFF">Offerte</a></li></div>
-            <div id="nav_li3"><li><a href="#" style="color:#FFFFFF">Guida al noleggio</a></li></div>
-            <div id="nav_li4"><li><a href="#" style="color:#FFFFFF">Contatti</a></li></div>
-            <div id="nav_li5"><li><a href="sign" style="color:#FFFFFF">Area Utente</a></li></div>
+            <div id="nav_li1"><li><a href="#">Homepage</a></li></div>
+            <div id="nav_li2"><li><a href="#">Offerte</a></li></div>
+            <div id="nav_li3"><li><a href="#">Guida al noleggio</a></li></div>
+            <div id="nav_li4"><li><a href="#">Contatti</a></li></div>
+            <div id="nav_li5"><li><a href="#">Area Utente</a></li></div>
           </ul>
         </nav>
 
@@ -58,7 +92,30 @@
     </main>
 
   <footer>
-    footer
+    <div id="footer" class="row">
+      <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+        <div class="row text-center">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">©CarRent è un marchio registrato</div>
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">Tutti i diritti riservati</div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+        <ul class="list-group list-unstyled">
+          <li>Hai delle curiosita?</li>
+          <li>Contattaci alla seguente mail: <a href="mailto::CarRent@gmail.com">CarRent@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 d-inline-flex justify-content-center">
+        <div class="row text-center">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">Seguiteci sui nostri social:</div>
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-inline-flex justify-content-center">
+            <div><a href="#"><img src="static/image/facebook.jpg" id="facebook"/></a></div>
+            <div><a href="#"><img src="static/image/instagram.jpg" id="instagram"/></a></div>
+            <div><a href="#"><img src="static/image/whatsapp.jpg" id="whatsapp"/></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
 
 </div>
