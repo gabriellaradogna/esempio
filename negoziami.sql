@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Set 19, 2022 alle 16:50
+-- Creato il: Set 19, 2022 alle 16:53
 -- Versione del server: 10.4.24-MariaDB
 -- Versione PHP: 8.1.6
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `negoziami`
 --
-CREATE DATABASE IF NOT EXISTS `negoziami` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `negoziami`;
 
 -- --------------------------------------------------------
 
