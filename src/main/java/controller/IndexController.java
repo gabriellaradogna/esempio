@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import dao.CarDao;
 import dao.UserDao;
 import model.Car;
+import service.CarService;
+import service.CarServiceImpl;
 
 @Controller
 @RequestMapping(path = {"/", "/index", "/home"})
@@ -23,21 +25,45 @@ public class IndexController {
 	CarDao carDao;
 	
 	@Autowired
-	UserDao userDao;
+	CarServiceImpl carServiceImpl;
+	
 
 	
 	@GetMapping
-	public String getPage(Model model, @RequestParam(value = "category", required = false) String category)
+	public String getPage(Model model, @RequestParam(value = "category", required = false) String category,
+			@RequestParam(value = "powerSupply", required = false) List<String> powerSupply,
+			@RequestParam(value = "numberSeats", required = false) List<String> numberSeats,
+			@)
 	{
 		List<Car> cars;
 		
-		if(category == null)
-			cars = carDao.findAll();
-		else 
+		if(category != null && powerSupply == null && numberSeats == null)
 			cars = carDao.findByCategory(category);
 		
-		System.out.println(userDao.findAll());
-		model.addAttribute("cars", cars);
+		else if(category == null && powerSupply != null && numberSeats == null)
+			cars = carDao.findByPowerSupplyIn(powerSupply);
+		
+		else if (category == null && powerSupply == null && numberSeats != null)
+			cars = carDao.findByNumberSeatsIn(numberSeats);
+		
+		else if (category == null && powerSupply == null && numberSeats == null)
+			cars = carDao.findAll();
+		
+		else if(category != null & powerSupply == null && numberSeats == null)
+			cars = carDao.findByCategoryAndPowerSupplyInAndNumberSeatsIn(category, powerSupply, numberSeats);
+		
+		else if(category != null && powerSupply != null && numberSeats == null)
+			cars = carDao.findByCategoryAndPowerSupplyIn(category, powerSupply);
+		
+		else if(category != null && numberSeats != null && powerSupply == null)
+			cars = carDao.findByCategoryAndNumberSeatsIn(category, numberSeats);
+		
+		else if(category == null && powerSupply != null && numberSeats != null);
+			cars = carDao.findByPowerSupplyInAndNumberSeatsIn(powerSupply, numberSeats);
+		
+			
+			
+	    model.addAttribute("cars", cars);
 		return "index";
 	}
 
