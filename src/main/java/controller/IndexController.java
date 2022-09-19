@@ -32,8 +32,8 @@ public class IndexController {
 	@GetMapping
 	public String getPage(Model model, @RequestParam(value = "category", required = false) String category,
 			@RequestParam(value = "powerSupply", required = false) List<String> powerSupply,
-			@RequestParam(value = "numberSeats", required = false) List<String> numberSeats,
-			@)
+			@RequestParam(value = "numberSeats", required = false) List<String> numberSeats
+			)
 	{
 		List<Car> cars;
 		
