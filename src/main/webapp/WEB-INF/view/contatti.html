@@ -2,11 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="it" class="h-100" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
-  <title>Contatti</title>
+  <title>Homepage</title>
   <meta name="viewport" content="width=device-width", initial-scale="1">
-  <link href="contatti.css" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="static/css/contatti.css" rel="stylesheet"/>
+  <link href="static/css/style.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Barlow" rel="stylesheet">
 </head>
 <body>
@@ -18,38 +18,143 @@
     </video>
     <img src="static/image/ragazzo2.png" id="img_ragazzo">
   </header>
-    <main>
-      <aside>
+  <main>
+    <aside>
+      <ul>
+        <form action="" method="post">
+          </br>
+          <h2 class="aside_h"><strong>Modelli</strong></h2>
+          <div id="aside_li1"><li><a href="#"><img src="static/image/Utilitaria.jpg" class="img_aside">&nbsp;&nbsp;Utilitarie</a></li></div>
+          <div id="aside_li2"><li><a href="#"><img src="static/image/Berlina.jpg" class="img_aside">&nbsp;&nbsp;Berlina</a></li></div>
+          <div id="aside_li3"><li><a href="#"><img src="static/image/Suv.jpg" class="img_aside">&nbsp;&nbsp;Suv</a></li></div>
+          <div id="aside_li4"><li><a href="#"><img src="static/image/Furgone.jpg" class="img_aside">&nbsp;&nbsp;Furgoni</a></li></div>
+          </br>
+          </br>
+          <h2 class="aside_h"><strong>Ricerca avanzata</strong></h2>
+          <h2 class="aside_h2">Prezzo giornaliero</h2>
+          <input id="price" type="range" name="price" style="color: #51585e" value="0" min="50" max="400" oninput="this.nextElementSibling.value = 'Fino a ' + this.value + '€'">
+          <output id="output_price">Fino a 50 €</output>
+          </br>
+          </br>
+          <h2 class="aside_h2">Date</h2>
+          <span class="span_date">da</span>&nbsp;&nbsp;
+          <input type="date" class="date" name="dateStart"
+                 value="2022-09-18"
+                 min="2022-09-19" max="2024-12-31"></br>
+          <span class="span_date">a </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="date" class="date" name="dateEnd"
+                 value="2022-09-19"
+                 min="2022-09-19" max="2024-12-31">
+          </br>
+          </br>
+          <h2 class="aside_h2">Alimentazione</h2>
+          <div id="checkbox_1">
+            <input type="checkbox" class="power_supply" name="powerSupply" value="Benzina" style="width : 20px; height : 20px;">
+            <label class="label_checkbox">&nbsp; Benzina</label><br>
+            <input type="checkbox" class="power_supply" name="powerSupply" value="Diesel" style="width : 20px; height : 20px;">
+            <label class="label_checkbox">&nbsp; Diesel</label><br>
+            <input type="checkbox" class="power_supply" name="powerSupply" value="Elettrica" style="width : 20px; height : 20px;">
+            <label class="label_checkbox">&nbsp; Elettrica</label><br>
+            <input type="checkbox" class="power_supply" name="powerSupply" value="Gpl" style="width : 20px; height : 20px;">
+            <label class="label_checkbox">&nbsp; Gpl</label><br>
+            <input type="checkbox" class="power_supply" name="powerSupply" value="Ibrida" style="width : 20px; height : 20px;">
+            <label class="label_checkbox">&nbsp; Ibrida</label>
+          </div>
+          </br>
+          <h2 class="aside_h2">Numero porte</h2>
+          <div id="checkbox_2">
+            <input type="checkbox" class="number_doors" name="numberDoors" value="3" style="width : 20px; height : 20px;">
+            <label class="label_checkbox">&nbsp; 3</label><br>
+            <input type="checkbox" class="number_doors" name="numberDoors" value="5" style="width : 20px; height : 20px;">
+            <label class="label_checkbox">&nbsp; 5</label>
+          </div>
+          <input type="button" id="aside_button1" name="invia" value="Invia">
+          <input type="button" id="aside_button2" name="azzera" value="Azzera">
+        </form>
+      </ul>
+    </aside>
 
-      </aside>
-
-      <div id="contenitore2">
-        <nav>
-          <ul>
-            <div id="nav_li1"><li><a href="index.html">Homepage</a></li></div>
-            <div id="nav_li2"><li><a href="#">Offerte</a></li></div>
-            <div id="nav_li3"><li><a href="#">Guida al noleggio</a></li></div>
-            <div id="nav_li4"><li><a href="contatti.html">Contatti</a></li></div>
-            <div id="nav_li5"><li><a href="#">Area Utente</a></li></div>
-          </ul>
-        </nav>
+    <div id="contenitore2">
+      <nav>
+        <ul>
+          <div id="nav_li1"><li><a href="index.html">Homepage</a></li></div>
+          <div id="nav_li2"><li><a href="#">Offerte</a></li></div>
+          <div id="nav_li3"><li><a href="#">Guida al noleggio</a></li></div>
+          <div id="nav_li4"><li><a href="contatti.html">Contatti</a></li></div>
+          <div id="nav_li5"><li><a href="#">Area Utente</a></li></div>
+        </ul>
+      </nav>
 
       <gallery>
+
+
+
         <div class="immagine_strada">
-          <h3 id="su_di_noi_h">Su di noi</h3>
-          <br/>
-          <br/>
-            <p id="su_di_noi"> Pugeto è un'azienda nata nel 2000 dalla fusione di due aziende situate tra il Veneto e la Puglia, il suo nome richiama
-            un'unione non soltanto territoriale.
-            Nasce da un’idea di esperti nel settore con pluriennale esperienza nel campo dell’auto, ed in particolare nel settore del Noleggio.
-            Il nostro motto è "Massima trasparenza, massima esperienza, massima affidabilità".
-            Pugeto è un modo veloce, semplice e pratico per organizzare i tuoi viaggi. Ti sarà sufficiente inserire a destinazione
-            le date di ritiro e di consegna nel nostro motore di ricerca per accedere alle migliori offerte.
+
+          <h2>CONTATTI</h2>
+
+
+          <div id="contact">
+            <div id="contact1">
+
+                <span>
+                    <strong class="contact_name"> Luciana Maselli</strong>
+                </span>
+              <br>
+              <span>
+                    Responsabile Amministrativo
+                </span>
+              <br>
+              <span>
+                    Tel: <strong> <a href="tel:+393385322212">+39 338 5322212</a></strong>
+                </span>
+              <br>
+              <span>
+                        <strong><a href="mailto:l.maselli@carrental.com">l.maselli@carrental.com</a></strong>
+                    </span>
+              <br>
+            </div>
+
+            <div id="contact2">
+                <span>
+                    <strong class="contact_name"> Vincenzo Carrieri</strong>
+                </span>
+              <br>
+              <span>
+                    Responsabile Noleggio
+                </span>
+              <br>
+              <span>
+                    Tel: <strong><a href="tel:+393295322220">+39 329 5322220</a></strong>
+                </span>
+              <br>
+              <span>
+                       <strong> <a href="mailto:v.carrieri@carrental.com">v.carrieri@carrental.com</a></strong>
+                    </span>
+              <br>
+            </div>
+
+          </div>
+
+          <div id="indirizzi">
+            <strong><p id="localita">Dove ci troviamo:</p></strong>
+
+            <p id="bari">S.S. 96 Km. 118+600
+              70026 Bari - Modugno
+              Tel: <strong><a href="tel:+390805532568">+39 080 5532568</a></strong>
             </p>
+
+            <p id="padova">Viale Unità D’Italia, 63
+              35143 Padova
+              Tel:<strong><a href="tel:+390495322330">+39 049 5322330</a></strong></p>
+
+          </div>
         </div>
+
+
       </gallery>
-      </div>
-    </main>
+    </div>
+  </main>
 
   <footer>
     <div id="footer" class="row">

@@ -86,13 +86,72 @@
         </nav>
 
       <gallery>
-        <div class="scheda" th:each = "car : ${cars}" >
-          <div class="scheda_sx"><img class ="immagine" th:src = "@{'static/icon/' + ${car.id_car} + '.jpg'}"></div>
-          <div class="scheda_dx">
-            <div class="info" th:text = "${car.brand} + '  ' + ${car.model}"></div>
-            <div class="prezzo" th:text = "${car.dailyPrice} + '€'"></div>
+
+
+
+        <div class="immagine_strada">
+
+          <h2>CONTATTI</h2>
+
+
+          <div id="contact">
+            <div id="contact1">
+
+                <span>
+                    <strong class="contact_name"> Luciana Maselli</strong>
+                </span>
+              <br>
+              <span>
+                    Responsabile Amministrativo
+                </span>
+              <br>
+              <span>
+                    Tel: <strong> <a href="tel:+393385322212">+39 338 5322212</a></strong>
+                </span>
+              <br>
+              <span>
+                        <strong><a href="mailto:l.maselli@carrental.com">l.maselli@carrental.com</a></strong>
+                    </span>
+              <br>
+            </div>
+
+            <div id="contact2">
+                <span>
+                    <strong class="contact_name"> Vincenzo Carrieri</strong>
+                </span>
+              <br>
+              <span>
+                    Responsabile Noleggio
+                </span>
+              <br>
+              <span>
+                    Tel: <strong><a href="tel:+393295322220">+39 329 5322220</a></strong>
+                </span>
+              <br>
+              <span>
+                       <strong> <a href="mailto:v.carrieri@carrental.com">v.carrieri@carrental.com</a></strong>
+                    </span>
+              <br>
+            </div>
+
+          </div>
+
+          <div id="indirizzi">
+            <strong><p id="localita">Dove ci troviamo:</p></strong>
+
+            <p id="bari">S.S. 96 Km. 118+600
+              70026 Bari - Modugno
+              Tel: <strong><a href="tel:+390805532568">+39 080 5532568</a></strong>
+            </p>
+
+            <p id="padova">Viale Unità D’Italia, 63
+              35143 Padova
+              Tel:<strong><a href="tel:+390495322330">+39 049 5322330</a></strong></p>
+
           </div>
         </div>
+
+
 
       </gallery>
       </div>

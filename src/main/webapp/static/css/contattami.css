@@ -92,36 +92,14 @@ nav a {
 nav a:hover{
   color: white;
 }
-
+  /* GALLERY da non modificare altriemtni si sminchia #indirizzi*/
 gallery {
   width: 100%;
-  height: auto;
-}
-.immagine_strada{
-  background-image: url("strada.jpeg");
-  background-size: cover ;
-  opacity: 0.75;
-  width: 100%;
-  height: 800px;
-  position: relative;
-  text-align: left;
-  color: white;
-  font-family: Barlow;
-  font-size: 25px;
-  font-style: italic;
-  padding: 60px 125px 125px 125px;
-}
-#su_di_noi_h{
-  font-size: 65px;
-  font-weight: normal;
-  text-align: left;
-  text-shadow: -1px 0 #0c4128, 0 1px #0c4128, 1px 0 #0c4128, 0 -1px #0c4128;
-}
-#su_di_noi{
-  color: white;
-  opacity: 0.9;
-  text-align: justify;
-  text-shadow: -1px 0 #0c4128, 0 1px #0c4128, 1px 0 #0c4128, 0 -1px #0c4128;
+  height: 740px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: scroll;
 }
 
 footer{
@@ -144,20 +122,144 @@ footer{
   line-height: 200%;
 }
 
+.specifiche{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.text{
+  font-size: 15px;
+}
+
 #facebook{
   max-width: 35px;
   margin-left: 10px;
 }
+
 #instagram{
   max-width: 35px;
   margin-left: 10px;
 }
+
 #whatsapp{
   max-width: 35px;
   margin-left: 10px;
 }
 
+/* Modifiche pagina su_di_noi*/
+
+#span{
+  margin-top: 0;
+}
+ /*
+ CONTATTI
+  */
+.immagine_strada{
+  background-image: url("strada.jpeg");
+  background-size: cover ;
+  opacity: 0.75;
+  width: 100%;
+  position: center;
+  text-align: left;
+  color: white;
+  font-family: "Barlow";
+  font-size: 25px;
+  padding: 60px 125px 125px 125px;
+  font-size: 15px;
+  padding: 125px;
+
+
+}
+h2{
+  padding-left: 50px;
+  font-size: 50px;
+  color: white ;
+  text-shadow: 3px 3px 3px black;  /*ombra*/
+
+}
+
+#contact{
+
+  padding-left: 50px;
+  padding-bottom:0px;
+  padding-top: 0px;
+  width: 100%;
+  height: 10%;
+  position: center;
+  text-shadow: 0 0 5px black;  /*ombra*/
+  color: white;
+  display: flex;
+
+}
+
+#contact1{
+
+  background: black;
+  opacity: 0.65;
+  padding: 250px 150px 200px 125px;
+
+}
+#contact2 {
+
+  background: black;
+  opacity: 0.65;
+  padding:250px 100px 200px 125px;
+
+}
+
+#indirizzi{
+
+  justify-content: center;
+  text-align: center;
+}
+#localita{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+#bari{
+  position: relative;
+  text-align: center;
+
+}
+#padova{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
 
 @media only screen and (max-width: 986px) {
+
+.immagine_strada{
+  background-image: url("strada.jpeg");
+  background-size: cover ;
+  opacity: 0.75;
+  width: 100%;
+  height:auto;
+  position: center;
+  text-align: left;
+  color: white;
+  font-family: "Barlow";
+  padding: 60px 125px 125px 125px;
+  font-size: 15px;
+  padding: 125px;
+}
+
+  #contact1{
+    width: 50%;
+padding-left: 20px;
+  }
+#contact{
+  width: 100%;
+  padding: 10px 20px 50px 15px;
+
+}
+#contact2{
+  width: 50%;
+  padding-left: 40px;
+
+}
+
 
 }
