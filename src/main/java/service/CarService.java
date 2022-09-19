@@ -1,5 +1,6 @@
 package service;
 
+import java.sql.Date;
 import java.util.List;
 
 import model.Car;
@@ -8,13 +9,8 @@ import model.Car;
 
 public interface CarService {
 	
-	List<Car> getCars();
-	Car getCarById(int id);
-	List<Car> getCarByBrand(String brand);
-	List<Car> getCarByCategory(String category);
-	List<Car> getCarByModel(String model); //
-	List<Car> getCarByPowerSupply(String powerSupply);
-	List<Car> getCarByDayliPrice(double minPrice, double maxPrice);
+	List<Car> filterByPrice(List<Car> cars, double price);
+	List<Car> filterByDate(List<Car> cars, Date dateStart, Date dateEnd);
 	
 
 }

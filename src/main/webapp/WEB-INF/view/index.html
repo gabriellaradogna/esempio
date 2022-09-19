@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Homepage</title>
   <meta name="viewport" content="width=device-width", initial-scale="1">
+  <link href="style.css" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="static/css/style.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Barlow" rel="stylesheet">
@@ -12,8 +13,8 @@
 <div id="contenitore">
   <header>
     <img src="static/image/logorent.jpg" id="img_logo">
-    <video id="static/video/video_header" autoplay loop>
-      <source th:src="@{static/video/macchine2.mp4}" type="video/mp4">
+    <video id="video_header" autoplay loop>
+      <source src="static/image/macchine2.mp4" type="video/mp4">
     </video>
     <img src="static/image/ragazzo2.png" id="img_ragazzo">
   </header>
@@ -28,7 +29,7 @@
           <div id="aside_li3"><li><a href="#"><img src="static/image/Suv.jpg" class="img_aside">&nbsp;&nbsp;Suv</a></li></div>
           <div id="aside_li4"><li><a href="#"><img src="static/image/Furgone.jpg" class="img_aside">&nbsp;&nbsp;Furgoni</a></li></div>
           </br>
-            </br>
+          </br>
           <h2 class="aside_h"><strong>Ricerca avanzata</strong></h2>
           <h2 class="aside_h2">Prezzo giornaliero</h2>
             <input id="price" type="range" name="price" style="color: #51585e" value="0" min="50" max="400" oninput="this.nextElementSibling.value = 'Fino a ' + this.value + '€'">
@@ -38,12 +39,12 @@
           <h2 class="aside_h2">Date</h2>
           <span class="span_date">da</span>&nbsp;&nbsp;
           <input type="date" class="date" name="dateStart"
-                 value="${dateToday}"
-                 min="${dateToday}" max="2024-12-31"></br>
+                 value="2022-09-18"
+                 min="2022-09-19" max="2024-12-31"></br>
           <span class="span_date">a </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="date" class="date" name="dateEnd"
-                 value="${dateToday}"
-                 min="${dateToday}" max="2024-12-31">
+                 value="2022-09-19"
+                 min="2022-09-19" max="2024-12-31">
           </br>
           </br>
           <h2 class="aside_h2">Alimentazione</h2>
@@ -76,10 +77,10 @@
       <div id="contenitore2">
         <nav>
           <ul>
-            <div id="nav_li1"><li><a href="WEB-INF/view/index.html">Homepage</a></li></div>
+            <div id="nav_li1"><li><a href="index.html">Homepage</a></li></div>
             <div id="nav_li2"><li><a href="#">Offerte</a></li></div>
             <div id="nav_li3"><li><a href="#">Guida al noleggio</a></li></div>
-            <div id="nav_li4"><li><a href="WEB-INF/view/su_di_noi.html">Contatti</a></li></div>
+            <div id="nav_li4"><li><a href="contatti.html">Contatti</a></li></div>
             <div id="nav_li5"><li><a href="#">Area Utente</a></li></div>
           </ul>
         </nav>

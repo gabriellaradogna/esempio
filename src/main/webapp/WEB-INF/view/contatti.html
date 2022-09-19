@@ -2,8 +2,9 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="it" class="h-100" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
-  <title>Homepage</title>
+  <title>Contatti</title>
   <meta name="viewport" content="width=device-width", initial-scale="1">
+  <link href="contatti.css" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="static/css/contatti.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Barlow" rel="stylesheet">
@@ -12,8 +13,8 @@
 <div id="contenitore">
   <header>
     <img src="static/image/logorent.jpg" id="img_logo">
-    <video id="static/video/video_header" autoplay loop>
-      <source th:src="@{static/video/macchine2.mp4}" type="video/mp4">
+    <video id="video_header" autoplay loop>
+      <source src="static/video/macchine2.mp4" type="video/mp4">
     </video>
     <img src="static/image/ragazzo2.png" id="img_ragazzo">
   </header>
@@ -25,10 +26,10 @@
       <div id="contenitore2">
         <nav>
           <ul>
-            <div id="nav_li1"><li><a href="#">Homepage</a></li></div>
+            <div id="nav_li1"><li><a href="index.html">Homepage</a></li></div>
             <div id="nav_li2"><li><a href="#">Offerte</a></li></div>
             <div id="nav_li3"><li><a href="#">Guida al noleggio</a></li></div>
-            <div id="nav_li4"><li><a href="#">Contatti</a></li></div>
+            <div id="nav_li4"><li><a href="contatti.html">Contatti</a></li></div>
             <div id="nav_li5"><li><a href="#">Area Utente</a></li></div>
           </ul>
         </nav>
@@ -52,13 +53,13 @@
 
   <footer>
     <div id="footer" class="row">
-      <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+      <div id="footer_sx" class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
         <div class="row text-center">
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">©CarRent è un marchio registrato</div>
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">Tutti i diritti riservati</div>
         </div>
       </div>
-      <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+      <div id="footer_center" class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
         <ul class="list-group list-unstyled">
           <li>Hai delle curiosita?</li>
           <li>Contattaci alla seguente mail: <a href="mailto::CarRent@gmail.com">CarRent@gmail.com</a></li>
@@ -68,9 +69,9 @@
         <div class="row text-center">
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">Seguiteci sui nostri social:</div>
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-inline-flex justify-content-center">
-            <div><a href="#"><img src="facebook.jpg" id="facebook"/></a></div>
-            <div><a href="#"><img src="instagram.jpg" id="instagram"/></a></div>
-            <div><a href="#"><img src="whatsapp.jpg" id="whatsapp"/></a></div>
+            <div><a href="#"><img src="static/image/facebook.jpg" id="facebook"/></a></div>
+            <div><a href="#"><img src="static/image/instagram.jpg" id="instagram"/></a></div>
+            <div><a href="#"><img src="static/image/whatsapp.jpg" id="whatsapp"/></a></div>
           </div>
         </div>
       </div>

@@ -100,10 +100,10 @@ aside a:hover {
   color: #51585e;
   line-height: 120%;
 }
-#checkbox_1, #checkbox_2{
+#checkbox_1,#checkbox_2{
   margin-left: 15px;
 }
-#aside_button1, #aside_button2 {
+#aside_button1,#aside_button2 {
   text-align: center;
   font-family: Barlow;
   font-size: 20px;
@@ -191,6 +191,9 @@ gallery {
   margin: 1%;
   border: 1px solid grey;
 }
+.info{
+
+}
 
 footer{
   height: 100px;
@@ -226,7 +229,6 @@ footer{
   max-width: 35px;
   margin-left: 10px;
 }
-
 
 
 @media only screen and (max-width: 986px) {

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Set 16, 2022 alle 15:37
+-- Creato il: Set 19, 2022 alle 16:50
 -- Versione del server: 10.4.24-MariaDB
 -- Versione PHP: 8.1.6
 
@@ -36,7 +36,7 @@ CREATE TABLE `cars` (
   `category` varchar(15) DEFAULT NULL,
   `power_supply` varchar(20) DEFAULT NULL,
   `displacement` varchar(10) DEFAULT NULL,
-  `number_seats` varchar(1) DEFAULT NULL,
+  `number_doors` varchar(1) DEFAULT NULL,
   `color` varchar(20) DEFAULT NULL,
   `daily_price` double(6,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -45,7 +45,7 @@ CREATE TABLE `cars` (
 -- Dump dei dati per la tabella `cars`
 --
 
-INSERT INTO `cars` (`id_car`, `model`, `brand`, `category`, `power_supply`, `displacement`, `number_seats`, `color`, `daily_price`) VALUES
+INSERT INTO `cars` (`id_car`, `model`, `brand`, `category`, `power_supply`, `displacement`, `number_doors`, `color`, `daily_price`) VALUES
 (1, '159', 'Alfa Romeo', 'Berlina', 'Benzina', '3.2 Jts', '5', 'Nero', 150.00),
 (2, 'Micra', 'Nissan', 'Berlina', 'Diesel', '1.5 Mt', '5', 'Bianco', 110.00),
 (3, 'Bravo', 'Fiat', 'Berlina', 'Benzina', '1.4', '5', 'Rosso scuro', 90.00),
@@ -149,8 +149,7 @@ ALTER TABLE `rental_cars`
 -- Indici per le tabelle `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id_user`),
-  ADD UNIQUE KEY `username` (`username`);
+  ADD PRIMARY KEY (`id_user`);
 
 --
 -- AUTO_INCREMENT per le tabelle scaricate

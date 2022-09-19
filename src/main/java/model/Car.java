@@ -39,8 +39,8 @@ public class Car implements Serializable{
 	@Column(name = "displacement")
 	private String displacement;
 	
-	@Column(name = "number_seats")
-	private String numberSeats;
+	@Column(name = "number_doors")
+	private String numberDoors;
 	
 	@Column(name = "color")
 	private String color;
@@ -110,13 +110,13 @@ public class Car implements Serializable{
 	}
 
 
-	public String getNumberSeats() {
-		return numberSeats;
+	public String getNumberDoors() {
+		return numberDoors;
 	}
 
 
-	public void setNumberSeats(String numberSeats) {
-		this.numberSeats = numberSeats;
+	public void setNumberDoors(String numberDoors) {
+		this.numberDoors = numberDoors;
 	}
 
 
