@@ -40,7 +40,6 @@ main{
 aside {
   position: relative;
   width: 20%;
-  height:100%;
   border: 2.5px black solid;
   /*border-bottom: 0px;*/
   padding: 0px 0.5% 0px 0.5%;
@@ -170,10 +169,6 @@ nav a:hover{
 gallery {
   width: 100%;
   height: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  overflow-y: scroll;
 }
 
 .scheda{
@@ -236,3 +231,105 @@ footer{
 
 
 }
+
+/* PARTE AGGIUNTIVA */
+
+.bottone{
+  margin-top: 70px;
+  margin-bottom: 270px;
+}
+
+.specifiche{
+  color: black;
+}
+
+.riga_footer{
+  margin-top: 10px;
+}
+
+.car{
+  width: 40px;
+  height: 40px;
+}
+
+.dati{
+  border-radius: 15px;
+  background: linear-gradient(to top left, #ffffff 50%, #000000 100%);
+  padding-left: 10px;
+}
+
+.dati:focus{
+  border: 2px solid black;
+}
+
+@media only screen and (max-width: 1628px) {
+  gallery {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 1175px) {
+  #img_ragazzo {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 994px) {
+  nav ul{
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 848px) {
+  nav ul{
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 833px) {
+  .form{
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .specifiche{
+    text-align: center;
+  }
+
+  .titolo_form {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 701px) {
+  nav ul{
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 664px) {
+  nav ul{
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 635px) {
+  footer{
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 603px) {
+  nav ul{
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 474px) {
+  nav ul{
+    font-size: 7px;
+  }
+}
+
