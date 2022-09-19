@@ -36,7 +36,7 @@ public class IndexController {
 	{
 		List<Car> cars;
 		cars = carDao.findAll();
-		if(category != null && powerSupply == null && numberDoors == null)
+		/*if(category != null && powerSupply == null && numberDoors == null)
 			cars = carDao.findByCategory(category);
 		
 		else if(category == null && powerSupply != null && numberDoors == null)
@@ -58,7 +58,7 @@ public class IndexController {
 			cars = carDao.findByCategoryAndNumberDoorsIn(category, numberDoors);
 		
 		else if(category == null && powerSupply != null && numberDoors != null);
-			cars = carDao.findByPowerSupplyInAndNumberDoorsIn(powerSupply, numberDoors);
+			cars = carDao.findByPowerSupplyInAndNumberDoorsIn(powerSupply, numberDoors);*/
 		
 			
 			
