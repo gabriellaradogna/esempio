@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Set 19, 2022 alle 11:44
+-- Creato il: Set 19, 2022 alle 16:50
 -- Versione del server: 10.4.24-MariaDB
 -- Versione PHP: 8.1.6
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `negoziami`
 --
+CREATE DATABASE IF NOT EXISTS `negoziami` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `negoziami`;
 
 -- --------------------------------------------------------
 
@@ -27,7 +29,6 @@ SET time_zone = "+00:00";
 -- Struttura della tabella `cars`
 --
 
-DROP TABLE IF EXISTS `cars`;
 CREATE TABLE `cars` (
   `id_car` int(11) NOT NULL,
   `model` varchar(40) DEFAULT NULL,
@@ -70,6 +71,62 @@ INSERT INTO `cars` (`id_car`, `model`, `brand`, `category`, `power_supply`, `dis
 (23, 'Kamiq', 'Skoda', 'Suv', 'Diesel', '1.6 Tdi', '5', 'Bianco', 329.00),
 (24, 'Cayenne', 'Porsche', 'Suv', 'Benzina', '3.0', '5', 'Nero', 405.00);
 
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `rental_cars`
+--
+
+CREATE TABLE `rental_cars` (
+  `id_rental` int(11) NOT NULL,
+  `id_user` int(11) DEFAULT NULL,
+  `id_car` int(11) DEFAULT NULL,
+  `rental_start` date DEFAULT NULL,
+  `rental_end` date DEFAULT NULL,
+  `total_price` double(4,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dump dei dati per la tabella `rental_cars`
+--
+
+INSERT INTO `rental_cars` (`id_rental`, `id_user`, `id_car`, `rental_start`, `rental_end`, `total_price`) VALUES
+(1, 3, 14, '2022-09-15', '2022-09-17', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `users`
+--
+
+CREATE TABLE `users` (
+  `id_user` int(11) NOT NULL,
+  `first_name` varchar(20) DEFAULT NULL,
+  `last_name` varchar(20) DEFAULT NULL,
+  `fiscal_code` varchar(16) DEFAULT NULL,
+  `telephone` varchar(10) DEFAULT NULL,
+  `mail` varchar(50) DEFAULT NULL,
+  `address` varchar(50) DEFAULT NULL,
+  `locality` varchar(50) DEFAULT NULL,
+  `province` varchar(2) DEFAULT NULL,
+  `postal_code` varchar(5) DEFAULT NULL,
+  `business_name` varchar(50) DEFAULT NULL,
+  `vat_number` varchar(11) DEFAULT NULL,
+  `username` varchar(50) DEFAULT NULL,
+  `password` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dump dei dati per la tabella `users`
+--
+
+INSERT INTO `users` (`id_user`, `first_name`, `last_name`, `fiscal_code`, `telephone`, `mail`, `address`, `locality`, `province`, `postal_code`, `business_name`, `vat_number`, `username`, `password`) VALUES
+(1, 'Francesco', 'Verdi', 'VRDFNC94E22F839U', '3206491043', NULL, 'Via Giardino dei Fiori, 19', 'Bari', 'BA', '70129', NULL, NULL, NULL, NULL),
+(2, 'Giuseppe', 'Bianchi', 'BNCGPP00D22F839B', '3210457698', NULL, 'Via dei Colombi, 78', 'Napoli', 'NA', '80100', NULL, NULL, 'Peppe33', 'password00'),
+(3, 'Carla', 'Neri', 'NRECRL70P28H501Y', '3784569803', NULL, 'Via dei Partigiani, 18', 'Roma', 'RM', '00010', 'CarServ S.r.l', '07643520567', NULL, NULL),
+(4, 'Paola', 'Gialli', 'GLLPLA83M41C352I', '3215648795', NULL, 'Via dei Serpenti, 65', 'Bari', 'BA', '70126', NULL, NULL, NULL, NULL),
+(5, 'Gennaro', 'Savastano', 'SVSGNR76M09F839Q', '3485760917', NULL, 'Via Furiosi, 65', 'Napoli', 'NA', '80100', NULL, NULL, NULL, NULL);
+
 --
 -- Indici per le tabelle scaricate
 --
@@ -81,6 +138,20 @@ ALTER TABLE `cars`
   ADD PRIMARY KEY (`id_car`);
 
 --
+-- Indici per le tabelle `rental_cars`
+--
+ALTER TABLE `rental_cars`
+  ADD PRIMARY KEY (`id_rental`),
+  ADD KEY `id_user` (`id_user`),
+  ADD KEY `id_car` (`id_car`);
+
+--
+-- Indici per le tabelle `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id_user`);
+
+--
 -- AUTO_INCREMENT per le tabelle scaricate
 --
 
@@ -89,6 +160,29 @@ ALTER TABLE `cars`
 --
 ALTER TABLE `cars`
   MODIFY `id_car` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
+-- AUTO_INCREMENT per la tabella `rental_cars`
+--
+ALTER TABLE `rental_cars`
+  MODIFY `id_rental` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT per la tabella `users`
+--
+ALTER TABLE `users`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- Limiti per le tabelle scaricate
+--
+
+--
+-- Limiti per la tabella `rental_cars`
+--
+ALTER TABLE `rental_cars`
+  ADD CONSTRAINT `id_car` FOREIGN KEY (`id_car`) REFERENCES `cars` (`id_car`),
+  ADD CONSTRAINT `id_user` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
