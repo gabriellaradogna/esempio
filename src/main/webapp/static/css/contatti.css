@@ -40,84 +40,10 @@ main{
 aside {
   position: relative;
   width: 20%;
-  height: 935px;
   border: 2.5px black solid;
   /*border-bottom: 0px;*/
   padding: 0px 0.5% 0px 0.5%;
   border-radius: 20px;
-}
-aside ul{
-  list-style: none;
-  font-family: Barlow;
-}
-.aside_h{
-  font-family: Barlow;
-  color: black;
-  font-size: 33px;
-  margin: auto;
-}
-.aside_h2{
-  font-family: Barlow;
-  color: black;
-  font-size: 28px;
-  margin-left: 7px;
-}
-#aside_li1,#aside_li2,#aside_li3,#aside_li4{
-  margin-left: 15px;
-}
-aside a{
-  text-decoration-line: none;
-  color: #51585e;
-  font-size: 30px;
-  line-height: 130%;
-}
-aside a:hover {
-  color: #000000;
-}
-.img_aside{
-  width: 45px;
-  margin-bottom: 3px;
-}
-#price{
-  width:140px;
-  font-family: Barlow;
-  margin-left: 15px;
-}
-.span_date{
-  font-size: 28px;
-  font-family: Barlow;
-  color: #51585e;
-  margin-left: 15px;
-}
-.date{
-  width: 140px;
-  margin: 2%;
-  font-size: 20px;
-  font-family: Barlow;
-}
-.label_checkbox{
-  font-size: 26px;
-  font-family: Barlow;
-  color: #51585e;
-  line-height: 120%;
-}
-#checkbox_1,#checkbox_2{
-  margin-left: 15px;
-}
-#aside_button1,#aside_button2 {
-  text-align: center;
-  font-family: Barlow;
-  font-size: 20px;
-  float: left;
-  width: auto;
-  padding: 0px 20px 4px 20px;
-  margin: 2%;
-  text-align: center;
-  border-radius: 20px;
-  height: auto;
-  background-color: black;
-  border: none;
-  color: white;
 }
 
 #contenitore2{
@@ -166,34 +92,14 @@ nav a {
 nav a:hover{
   color: white;
 }
-
+  /* GALLERY da non modificare altriemtni si sminchia #indirizzi*/
 gallery {
   width: 100%;
-  height: 875px;
+  height: 740px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   overflow-y: scroll;
-}
-
-.scheda{
-  position: relative;
-  float: left;
-  width: 46%;
-  height: 46%;
-  margin: 1% auto;
-  border: 1px solid grey;
-}
-.scheda_sx, .scheda_dx{
-  display: flex;
-  float: left;
-  width: 300px;
-  height: 300px;
-  margin: 1%;
-  border: 1px solid grey;
-}
-.info{
-
 }
 
 footer{
@@ -216,6 +122,15 @@ footer{
   line-height: 200%;
 }
 
+.specifiche{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.text{
+  font-size: 15px;
+}
+
 #facebook{
   max-width: 35px;
   margin-left: 10px;
@@ -231,8 +146,120 @@ footer{
   margin-left: 10px;
 }
 
+/* Modifiche pagina su_di_noi*/
+
+#span{
+  margin-top: 0;
+}
+ /*
+ CONTATTI
+  */
+.immagine_strada{
+  background-image: url("strada.jpeg");
+  background-size: cover ;
+  opacity: 0.75;
+  width: 100%;
+  position: center;
+  text-align: left;
+  color: white;
+  font-family: "Barlow";
+  font-size: 25px;
+  padding: 60px 125px 125px 125px;
+  font-size: 15px;
+  padding: 125px;
+
+
+}
+h2{
+  padding-left: 50px;
+  font-size: 50px;
+  color: white ;
+  text-shadow: 3px 3px 3px black;  /*ombra*/
+
+}
+
+#contact{
+
+  padding-left: 50px;
+  padding-bottom:0px;
+  padding-top: 0px;
+  width: 100%;
+  height: 10%;
+  position: center;
+  text-shadow: 0 0 5px black;  /*ombra*/
+  color: white;
+  display: flex;
+
+}
+
+#contact1{
+
+  background: black;
+  opacity: 0.65;
+  padding: 250px 150px 200px 125px;
+
+}
+#contact2 {
+
+  background: black;
+  opacity: 0.65;
+  padding:250px 100px 200px 125px;
+
+}
+
+#indirizzi{
+
+  justify-content: center;
+  text-align: center;
+}
+#localita{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+#bari{
+  position: relative;
+  text-align: center;
+
+}
+#padova{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
 
 @media only screen and (max-width: 986px) {
+
+.immagine_strada{
+  background-image: url("strada.jpeg");
+  background-size: cover ;
+  opacity: 0.75;
+  width: 100%;
+  height:auto;
+  position: center;
+  text-align: left;
+  color: white;
+  font-family: "Barlow";
+  padding: 60px 125px 125px 125px;
+  font-size: 15px;
+  padding: 125px;
+}
+
+  #contact1{
+    width: 50%;
+padding-left: 20px;
+  }
+#contact{
+  width: 100%;
+  padding: 10px 20px 50px 15px;
+
+}
+#contact2{
+  width: 50%;
+  padding-left: 40px;
+
+}
 
 
 }
