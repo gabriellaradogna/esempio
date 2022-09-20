@@ -1,0 +1,281 @@
+@charset "utf-8";
+
+/* contenitore generico della pagina*/
+#contenitore {
+  width: 100%;
+  /*height: 1500px;*/
+  margin: auto;
+
+
+}
+
+header {
+  width: 100%;
+  height: 300px;
+  margin: auto;
+  text-align: center;
+
+}
+#img_logo{
+  width: 200px;
+  height: 150px;
+  margin-top: 8px;
+}
+#video_header{
+  width: 600px;
+  height: 100px;
+}
+#img_ragazzo{
+  width: 350px;
+  height: 250px;
+  margin-top: 50px;
+  margin-left: 0px;
+}
+
+main{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 80%;
+
+}
+
+aside {
+  position: relative;
+  width: 20%;
+  border: 2.5px black solid;
+  /*border-bottom: 0px;*/
+  padding: 0px 0.5% 0px 0.5%;
+  border-radius: 20px;
+}
+
+#contenitore2{
+  width: 80%;
+  height: 100%;
+
+
+}
+nav {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  display: block;
+  background-color: black;
+  border-radius: 10px;
+}
+nav ul{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  padding: 0;
+  font-size: 25px;
+  font-family: Barlow;
+}
+nav li {
+  width: auto;
+  height: 60px;
+  text-align: center;
+  line-height: 55px; /* solo così sono riuscita a centrare la scritta*/
+  list-style: none;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#nav_li1, #nav_li2, #nav_li4, #nav_li5{
+  width: 19%;
+
+}
+#nav_li3{
+  width: 24%;
+
+}
+nav a {
+  color: #bcbebf;
+  text-decoration: none!important;
+}
+nav a:hover{
+  color: white;
+}
+/* GALLERY da non modificare altriemtni si sminchia #indirizzi*/
+gallery {
+  width: 100%;
+  height: 740px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+
+}
+
+footer{
+  height: 100px;
+  background-color: black;
+  font-size: 15px;
+  color: white;
+  font-family: Barlow;
+}
+#footer{
+  padding: 20px;
+  margin: auto;
+}
+#footer_sx{
+  margin: auto;
+  line-height: 200%;
+}
+#footer_center{
+  margin: auto;
+  line-height: 200%;
+}
+
+.specifiche{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.text{
+  font-size: 15px;
+}
+
+#facebook{
+  max-width: 35px;
+  margin-left: 10px;
+}
+
+#instagram{
+  max-width: 35px;
+  margin-left: 10px;
+}
+
+#whatsapp{
+  max-width: 35px;
+  margin-left: 10px;
+}
+
+/* Modifiche pagina su_di_noi*/
+
+#span{
+  margin-top: 0;
+}
+/*
+CONTATTI
+ */
+.immagine_audi{
+  background-image: url("audi_sfondo.jpg");
+  background-size: cover ;
+  width: 100%;
+  position: center;
+  text-align: left;
+  font-family: "Barlow";
+  font-size: 25px;
+  padding: 60px 125px 125px 125px;
+  font-size: 15px;
+  padding: 125px;
+
+
+
+}
+
+h1{
+  color: black;
+  text-shadow: 3px 3px 3px white;  /*ombra*/
+  font-size: xxx-large;
+  padding-top: 0px;
+}
+text{
+
+  color: black;
+  text-shadow: 3px 3px 3px white;  /*ombra*/
+  font-size: large;
+
+
+}
+
+#noleggio{
+  padding-top: 5%;
+  background-color: black;
+  opacity: 0.57;
+  display: flex;
+  color:white;
+
+
+
+}
+#elenco{
+  display: flex;
+  font-size: 20px;
+  color: white;
+  text-shadow: 3px 3px 3px black;  /*ombra*/
+
+}
+.canone{
+  font-size: larger;
+  text-shadow: 3px 3px 3px black;  /*ombra*/
+
+}
+#orari{
+  color: white;
+  padding-left: 650px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 15px;
+  background-color: black;
+  opacity: 0.57;
+
+}
+#orari2{
+  display: none;
+
+}
+
+@media only screen and (max-width: 986px) {
+
+  .immagine_audi{
+    background-image: url("audi_sfondo.jpg");
+    background-color: black;
+    opacity: 0.75;
+    width: 100%;
+    height:auto;
+    position: center;
+    text-align: left;
+    color: white;
+    font-family: "Barlow";
+    padding: 60px 125px 125px 125px;
+    font-size: 15px;
+    padding: 125px;
+  }
+
+  #orari{
+    display: none;
+    /*color: white;
+    padding-left: 650px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 15px;
+    background-color: black;
+    opacity: 0.57;*/
+
+
+  }
+
+#orari2 {
+
+  display: flex;
+  background-color: black;
+  opacity: 0.57
+}
+
+@media only screen and (max-width:480px){
+
+  #orari2 {
+
+    display: flex;
+    background-color: black;
+    opacity: 0.57
+  }
+
+
+
+}
+}
