@@ -1,0 +1,332 @@
+@charset "utf-8";
+
+/* contenitore generico della pagina*/
+#contenitore {
+  width: 100%;
+  /*height: 1500px;*/
+  margin: auto;
+}
+
+header {
+  width: 100%;
+  height: 300px;
+  margin: auto;
+  text-align: center;
+}
+#img_logo{
+  width: 200px;
+  height: 150px;
+  margin-top: 8px;
+}
+#video_header{
+  width: 600px;
+  height: 100px;
+}
+#img_ragazzo{
+  width: 350px;
+  height: 250px;
+  margin-top: 50px;
+  margin-left: 0px;
+}
+
+main{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 80%;
+}
+
+aside {
+  position: relative;
+  width: 20%;
+  height: 935px;
+  border: 2.5px black solid;
+  /*border-bottom: 0px;*/
+  padding: 0px 0.5% 0px 0.5%;
+  border-radius: 20px;
+}
+aside ul{
+  list-style: none;
+  font-family: Barlow;
+}
+.aside_h{
+  font-family: Barlow;
+  color: black;
+  font-size: 33px;
+  margin: auto;
+}
+.aside_h2{
+  font-family: Barlow;
+  color: black;
+  font-size: 28px;
+  margin-left: 7px;
+}
+#aside_li1,#aside_li2,#aside_li3,#aside_li4{
+  margin-left: 15px;
+}
+aside a{
+  text-decoration-line: none;
+  color: #51585e;
+  font-size: 30px;
+  line-height: 130%;
+}
+aside a:hover {
+  color: #000000;
+}
+.img_aside{
+  width: 45px;
+  margin-bottom: 3px;
+}
+#price{
+  width:140px;
+  font-family: Barlow;
+  margin-left: 15px;
+}
+.span_date{
+  font-size: 28px;
+  font-family: Barlow;
+  color: #51585e;
+  margin-left: 15px;
+}
+.date{
+  width: 140px;
+  margin: 2%;
+  font-size: 20px;
+  font-family: Barlow;
+}
+.label_checkbox{
+  font-size: 26px;
+  font-family: Barlow;
+  color: #51585e;
+  line-height: 120%;
+}
+#checkbox_1,#checkbox_2{
+  margin-left: 15px;
+}
+#aside_button1,#aside_button2 {
+  text-align: center;
+  font-family: Barlow;
+  font-size: 20px;
+  float: left;
+  width: auto;
+  padding: 0px 20px 4px 20px;
+  margin: 2%;
+  text-align: center;
+  border-radius: 20px;
+  height: auto;
+  background-color: black;
+  border: none;
+  color: white;
+}
+
+#contenitore2{
+  width: 80%;
+  height: 100%;
+}
+nav {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  display: block;
+  background-color: black;
+  border-radius: 10px;
+}
+nav ul{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  padding: 0;
+  font-size: 25px;
+  font-family: Barlow;
+}
+nav li {
+  width: auto;
+  height: 60px;
+  text-align: center;
+  line-height: 55px; /* solo così sono riuscita a centrare la scritta*/
+  list-style: none;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#nav_li1, #nav_li2, #nav_li4, #nav_li5{
+  width: 19%;
+
+}
+#nav_li3{
+  width: 24%;
+
+}
+nav a {
+  color: #bcbebf;
+  text-decoration: none!important;
+}
+nav a:hover{
+  color: white;
+}
+
+gallery {
+  width: 100%;
+  height: 740px;
+  display: flex;
+}
+
+#containerloginform {
+  width:40%;
+  height: 80%;
+  margin:auto;
+  background-color:lightgray;
+}
+
+#logologin {
+  width: 120px;
+  height:80px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  background-image: url("logo.jpg");
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+
+#formlogin {
+  margin: auto;
+}
+
+.form1 {
+  margin-top:40px;
+  font-family:Barlow;
+  text-align: center;
+}
+
+.fieldsform1 {
+  text-align: center;
+  font-size: 25px;
+  color:black;
+  background-color:white ;
+  border: 1px solid black;
+  font-family:Barlow;
+}
+
+#question {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom:0.5px;
+}
+#newaccount {
+  text-align: center;
+  font-family:Barlow;
+
+}
+
+#createaccount {
+  text-align: center;
+  font-size: 25px;
+  color: black;
+  background-color: white;
+  font-size: 25px;
+}
+
+#containerregistrationform {
+  margin:auto;
+  background-color: lightgray;
+  display:none;
+}
+
+#formregistration {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.subtitle1 {
+  text-align:center;
+  clear: both;
+  font-family:Barlow;
+  font-size: 30px;
+}
+
+#firstcontainer {
+  text-align: center;
+  padding-right:25px;
+}
+
+.form2 {
+  float: left;
+  margin-left: 25px;
+  margin-top: 20px;
+  margin-bottom:20px;
+}
+
+#subtitle2 {
+  text-align: center;
+}
+
+
+.form3 {
+  float: left;
+  margin-left: 25px;
+  visibility: hidden;
+}
+
+#thirdcontainer {
+  clear: both;
+  display: none;
+}
+
+#form4 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#form5 {
+  clear: both;
+  font-family:Barlow;
+  text-align: center;
+  margin-top: 100px;
+}
+
+
+
+footer{
+  height: 100px;
+  background-color: black;
+  font-size: 15px;
+  color: white;
+  font-family: Barlow;
+}
+#footer{
+  padding: 20px;
+  margin: auto;
+}
+#footer_sx{
+  margin: auto;
+  line-height: 200%;
+}
+#footer_center{
+  margin: auto;
+  line-height: 200%;
+}
+
+#facebook{
+  max-width: 35px;
+  margin-left: 10px;
+}
+
+#instagram{
+  max-width: 35px;
+  margin-left: 10px;
+}
+
+#whatsapp{
+  max-width: 35px;
+  margin-left: 10px;
+}
+
+
+@media only screen and (max-width: 986px) {
+
+
+}

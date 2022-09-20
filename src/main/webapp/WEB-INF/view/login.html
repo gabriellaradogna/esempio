@@ -1,37 +1,126 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="it" class="h-100">
+<html xmlns:th="http://www.thymeleaf.org" lang="it" class="h-100" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
-  <title>Login</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <link rel="stylesheet" th:href="@{/static/css/login.css}">
+  <title>Homepage</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width", initial-scale="1">
+  <link href="login.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="loginreg.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow" rel="stylesheet">
 </head>
 <body>
 <div id="contenitore">
-  <form method="post" action="sign/login"name="form1">
-      <fieldset>
-        <legend>Login</legend>
-        <h1>Username</h1><input type="text" name="username" class="testi"required placeholder="Username" /><br/>
-        <h1>Password</h1><input type="password" name="password" class="testi" required placeholder="Password"/><br/>
-        <a href="#">Password dimenticata?</a></br><br/>
-        <input type="submit" name="submit" class="pulsante" value="Accedi"/>
-      </fieldset>
-  </form>
+  <header>
+    <img src="static/image/logorent.jpg" id="img_logo">
+    <video id="video_header" autoplay loop>
+      <source src="static/video/macchine2.mp4" type="video/mp4">
+    </video>
+    <img src="static/image/ragazzo2.png" id="img_ragazzo">
+  </header>
+    <main>
+        <nav>
+          <ul>
+            <div id="nav_li1"><li><a href="index.html">Homepage</a></li></div>
+            <div id="nav_li2"><li><a href="#">Offerte</a></li></div>
+            <div id="nav_li3"><li><a href="#">Guida al noleggio</a></li></div>
+            <div id="nav_li4"><li><a href="contatti.html">Contatti</a></li></div>
+            <div id="nav_li5"><li><a href="#">Area Utente</a></li></div>
+          </ul>
+        </nav>
 
-    <h1>Non sei registrato? Crea subito un account</h1>
-  <form method="post" action="sign/signup"name="form2">
-    <fieldset>
-      <legend>Registrazione</legend>
-        <h1>Nome</h1><input type="text" name="nome" class="testi"required placeholder="Nome" /><br/>
-        <h1>Cognome</h1><input type="text" name="cognome" class="testi" required placeholder="Cognome"/><br/>
-        <h1>Codice Fiscale</h1><input type="text" name="codiceFiscale" class="testi" required placeholder="Codice Fiscale"/><br/>
-        <h1>Telefono</h1><input type="text" name="telefono" class="testi" required placeholder="Telefono"/><br/>
-        <h1>E-mail</h1><input type="text" name="email" class="testi" required placeholder="E-mail"/>
-        <h1>Scegli username</h1><input type="text" name="username" class="testi" required placeholder="E-mail"/>
-        <h1>Scegli password</h1><input type="password" name="password" class="testi" required placeholder="Password"/><br/><br/>
-        <input type="submit" name="submit" class="pulsante" value="Crea account"/>
-    </fieldset>
-  </form>
+      <gallery>
+          <div id="containerloginform">
+            <div id="formlogin">
+              <div id="logologin"></div>
+              <form method="get" action="/login">
+                <div class="form1"><input type="text" name="username" class="fieldsform1" required placeholder="Username"></div>
+                <div class="form1"><input type="password" name="password" class="fieldsform1" required placeholder="Password"><br/>
+                  <a href="#" id="editpassword">Password dimenticata?</a></div>
+                <div class="form1"><input type="submit" name="submit"value="Accedi" class="fieldsform1"></div>
+              </form>
+            </div>
+            <div class="form1"><h1 id="question">Non sei registrato?</h1></div>
+            <div id="newaccount"><input type="button" name="submit"  value="Crea un account" id="createaccount"></div>
+          </div>
+
+          <div id="containerregistrationform">
+            <div id="formregistration">
+              <div class="subtitle1">Dati anagrafici:</div>
+              <form method="post" action="/signin">
+                <div id="firstcontainer">
+                  <div class="form2"><input type="text" name="nome" class="fieldsform1" required placeholder="Nome"></div>
+                  <div class="form2"><input type="text" name="cognome" class="fieldsform1" required placeholder="Cognome"></div>
+                  <div class="form2"><input type="text" name="telefono" class="fieldsform1" required placeholder="Telefono"></div>
+                  <div class="form2"><input type="text" name="email" class="fieldsform1" required placeholder="E-mail"></div>
+                  <div id="thirdcontainer">
+                    <div id="form4" id><input type="text" name="codice_fiscale" class="fieldsform1" required placeholder="Codice fiscale">
+                    </div>
+                  </div>
+                </div>
+                <div class="subtitle1" id="subtitle2">Sei un'azienda?
+                  <input type="radio" name="genere" id="yes"/>Sì
+                  <input type="radio" name="genere" id="no"/>No
+                </div>
+                <div id="secondcontainer">
+                  <div class="form3" ><input type="text" name="ragione_sociale" class="fieldsform1"  placeholder="Ragione sociale"></div>
+                  <div class="form2"><input type="text" name="ragione_sociale" class="fieldsform1" placeholder="Ragione sociale"></div>
+                  <div class="form2"><input type="text" name="partita_iva" class="fieldsform1"  placeholder="Partita IVA"></div>
+                  <div class="form3"><input type="text" name="ragione_sociale" class="fieldsform1" class="hide" placeholder="Ragione sociale"></div>
+                </div>
+                <div class="subtitle1">Indirizzo di recapito:</div>
+                <div id="fourcontainer">
+                  <div class="form2"><input type="text" name="indirizzo" class="fieldsform1" required placeholder="Indirizzo"></div>
+                  <div class="form2"><input type="text" name="localita" class="fieldsform1" required placeholder="Località"></div>
+                  <div class="form2"><input type="text" name="provincia" class="fieldsform1" required placeholder="Provincia"></div>
+                  <div class="form2"><input type="text" name="cap" class="fieldsform1" required placeholder="Cap"></div>
+                </div>
+
+
+                <div class="subtitle1">Credenziali utente:</div>
+                <div id="fivecontainer">
+                  <div class="form3" ><input type="text" name="ragione_sociale" class="fieldsform1"  placeholder="Scegli username"></div>
+                  <div class="form2"><input type="text" name="username" class="fieldsform1" required placeholder="Scegli username"></div>
+                  <div class="form2"><input type="password" name="password" class=fieldsform1 required placeholder="Scegli password"></div>
+                  <div class="form3" ><input type="text" name="ragione_sociale" class="fieldsform1"  placeholder="Scegli username"></div>
+                </div>
+                <div id="form5"><input type="submit" name="submit" class="fieldsform1" value="Registrati"></div>
+              </form>
+            </div>
+          </div>
+      </gallery>
+
+    </main>
+
+  <footer>
+    <div id="footer" class="row">
+      <div id="footer_sx" class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+        <div class="row text-center">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">©CarRent è un marchio registrato</div>
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">Tutti i diritti riservati</div>
+        </div>
+      </div>
+      <div id="footer_center" class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+        <ul class="list-group list-unstyled">
+          <li>Hai delle curiosita?</li>
+          <li>Contattaci alla seguente mail: <a href="mailto::CarRent@gmail.com">CarRent@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 d-inline-flex justify-content-center">
+        <div class="row text-center">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">Seguiteci sui nostri social:</div>
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-inline-flex justify-content-center">
+            <div><a href="#"><img src="static/image/facebook.jpg" id="facebook"/></a></div>
+            <div><a href="#"><img src="static/image/instagram.jpg" id="instagram"/></a></div>
+            <div><a href="#"><img src="static/image/whatsapp.jpg" id="whatsapp"/></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </div>
+<script type="text/javascript" src="javascript.js"></script>
 </body>
 </html>
