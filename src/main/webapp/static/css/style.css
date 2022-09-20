@@ -40,7 +40,7 @@ main{
 aside {
   position: relative;
   width: 20%;
-  height:100%;
+  height: 935px;
   border: 2.5px black solid;
   /*border-bottom: 0px;*/
   padding: 0px 0.5% 0px 0.5%;
@@ -169,7 +169,7 @@ nav a:hover{
 
 gallery {
   width: 100%;
-  height: auto;
+  height: 875px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
