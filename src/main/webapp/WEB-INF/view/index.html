@@ -88,9 +88,9 @@
       <gallery>
         
         <div class="scheda" th:each = "car : ${cars}" >
-          <div class="scheda_sx"><a th:href="@{/home/dettagli}"><img class ="immagine" th:src = "@{'static/icon/' + ${car.id_car} + '.jpg'}"></a></div>
-          <div class="scheda_dx">
-            <div class="info" xth:text = "${car.brand} + '  ' + ${car.model}"></div>
+          <div class="scheda_up"><a th:href="@{/home/dettagli}"><img class ="immagine" th:src = "@{'static/icon/' + ${car.id_car} + '.png'}"></a></div>
+          <div class="scheda_down">
+            <div class="info" th:text = "${car.brand} + '  ' + ${car.model}"></div>
             <div class="prezzo" th:text = "${car.dailyPrice} + '€'"></div>
           </div>
         </div>
