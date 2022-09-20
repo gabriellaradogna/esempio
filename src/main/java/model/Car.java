@@ -1,13 +1,19 @@
 package model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
 
 
 @Entity
@@ -15,7 +21,8 @@ import javax.persistence.Table;
 public class Car implements Serializable{
 	
 	private static final long serialVersionUID = 5610287293442676523L;
-
+	
+	public Car() {};
 
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
@@ -48,6 +55,19 @@ public class Car implements Serializable{
 	
 	@Column(name = "daily_price")
 	private double dailyPrice;
+	
+	@OneToMany(mappedBy = "car", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
+	private List<RentalCars> rentalCars = new ArrayList();
+	
+
+	public List<RentalCars> getRentalCars() {
+		return rentalCars;
+	}
+
+
+	public void setRentalCars(List<RentalCars> rentalCars) {
+		this.rentalCars = rentalCars;
+	}
 
 
 	public int getId_car() {
