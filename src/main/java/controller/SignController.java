@@ -17,7 +17,7 @@ import model.User;
 
 
 @Controller
-@RequestMapping("/sign")
+@RequestMapping("/home/sign")
 public class SignController {
 	
 	@Autowired
@@ -28,7 +28,7 @@ public class SignController {
 		
 		
 		
-		return "sign";
+		return "login";
 	}
 	
 	@PostMapping("/login")
