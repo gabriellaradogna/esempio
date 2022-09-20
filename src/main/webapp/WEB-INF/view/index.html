@@ -21,19 +21,19 @@
     <main>
       <aside>
         <ul>
-          <form action="" method="post">
+          <form action="" method="get">
             </br>
           <h2 class="aside_h"><strong>Modelli</strong></h2>
-          <div id="aside_li1"><li><a href="#"><img src="static/image/Utilitaria.jpg" class="img_aside">&nbsp;&nbsp;Utilitarie</a></li></div>
-          <div id="aside_li2"><li><a href="#"><img src="static/image/Berlina.jpg" class="img_aside">&nbsp;&nbsp;Berlina</a></li></div>
-          <div id="aside_li3"><li><a href="#"><img src="static/image/Suv.jpg" class="img_aside">&nbsp;&nbsp;Suv</a></li></div>
-          <div id="aside_li4"><li><a href="#"><img src="static/image/Furgone.jpg" class="img_aside">&nbsp;&nbsp;Furgoni</a></li></div>
+          <div id="aside_li1"><li><a href="home?category=Utilitaria"><img src="static/image/Utilitaria.jpg" class="img_aside">&nbsp;&nbsp;Utilitarie</a></li></div>
+          <div id="aside_li2"><li><a href="home?category=Berlina"><img src="static/image/Berlina.jpg" class="img_aside">&nbsp;&nbsp;Berlina</a></li></div>
+          <div id="aside_li3"><li><a href="home?category=Suv"><img src="static/image/Suv.jpg" class="img_aside">&nbsp;&nbsp;Suv</a></li></div>
+          <div id="aside_li4"><li><a href="home?category=Furgone"><img src="static/image/Furgone.jpg" class="img_aside">&nbsp;&nbsp;Furgoni</a></li></div>
           </br>
           </br>
           <h2 class="aside_h"><strong>Ricerca avanzata</strong></h2>
           <h2 class="aside_h2">Prezzo giornaliero</h2>
-            <input id="price" type="range" name="price" style="color: #51585e" value="0" min="50" max="400" oninput="this.nextElementSibling.value = 'Fino a ' + this.value + '€'">
-          <output id="output_price">Fino a 50 €</output>
+            <input id="price" type="range" name="price" style="color: #51585e" value="405" min="85" max="405" oninput="this.nextElementSibling.value = 'Fino a ' + this.value + '€'">
+          <output id="output_price">Fino a 405 €</output>
           </br>
           </br>
           <h2 class="aside_h2">Date</h2>
@@ -68,7 +68,7 @@
             <input type="checkbox" class="number_doors" name="numberDoors" value="5" style="width : 20px; height : 20px;">
             <label class="label_checkbox">&nbsp; 5</label>
           </div>
-            <input type="button" id="aside_button1" name="invia" value="Invia">
+            <input type="submit" id="aside_button1" name="invia" value="Invia">
             <input type="button" id="aside_button2" name="azzera" value="Azzera">
           </form>
         </ul>
