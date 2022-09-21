@@ -162,7 +162,7 @@ footer{
 CONTATTI
  */
 .immagine_audi{
-  background-image: url("audi_sfondo.jpg");
+  background-image: url("static/image/audi_sfondo.jpg");
   background-size: cover ;
   width: 100%;
   position: center;

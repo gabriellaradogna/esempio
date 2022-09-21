@@ -232,7 +232,7 @@ h2{
 @media only screen and (max-width: 986px) {
 
 .immagine_strada{
-  background-image: url("strada.jpeg");
+  background-image: url("static/image/strada.jpeg");
   background-size: cover ;
   opacity: 0.75;
   width: 100%;
