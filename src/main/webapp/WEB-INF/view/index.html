@@ -87,7 +87,7 @@
 
       <gallery>
         
-        <div class="scheda" th:each = "car : ${cars}" >
+        <div class="scheda" th:each = "car : ${cars}" ><a href="#"></a>
           <div class="scheda_up"><img class ="immagine" th:src = "@{'static/icon/' + ${car.id_car} + '.png'}"></div>
           <div class="scheda_down">
             <div class="info" th:text = "${car.brand} + '  ' + ${car.model}"></div>
