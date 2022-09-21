@@ -6,7 +6,7 @@
   /*height: 1500px;*/
   margin: auto;
 }
-/* -- HEADER -- */
+
 header {
   width: 100%;
   height: 300px;
@@ -28,7 +28,7 @@ header {
   margin-top: 50px;
   margin-left: 0px;
 }
-/* -- MAIN -- */
+
 main{
   display: flex;
   flex-direction: row;
@@ -38,12 +38,13 @@ main{
 }
 
 aside {
-  position: relative;
+
+  background-image: url("/noleggioAuto/static/image/mappa-bari-badova.jpg");
   width: 20%;
   border: 2.5px black solid;
-  /*border-bottom: 0px;*/
-  padding: 0px 0.5% 0px 0.5%;
   border-radius: 20px;
+  background-size: cover;
+  background-position-x: -120px;
 }
 
 #contenitore2{
@@ -94,12 +95,14 @@ nav a:hover{
 }
   /* GALLERY da non modificare altriemtni si sminchia #indirizzi*/
 gallery {
+  background-color: white;
   width: 100%;
-  height: 740px;
+  height: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  overflow-y: scroll;
+
+
 }
 
 footer{
@@ -155,7 +158,7 @@ footer{
  CONTATTI
   */
 .immagine_strada{
-  background-image: url("static/image/strada.jpeg");
+  background-image: url("/noleggioAuto/static/image/strada.jpeg");
   background-size: cover ;
   opacity: 0.75;
   width: 100%;
@@ -227,12 +230,14 @@ h2{
   text-align: center;
   color: white;
 }
+/*MAPPA*/
+
 
 
 @media only screen and (max-width: 986px) {
 
 .immagine_strada{
-  background-image: url("static/image/strada.jpeg");
+  background-image: url("/noleggioAuto/static/image/strada.jpeg");
   background-size: cover ;
   opacity: 0.75;
   width: 100%;
