@@ -4,14 +4,26 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.stereotype.Service;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import dao.CarDao;
 import model.Car;
 import model.RentalCars;
 
 @Service
 public class CarServiceImpl implements CarService{
 
+	@PersistenceContext
+	private EntityManager manager;
+	
+	@Autowired
+	CarDao carDao;
+	
 	@Override
 	public List<Car> filterByPrice(List<Car> cars, Double price) {
 		
@@ -48,6 +60,12 @@ public class CarServiceImpl implements CarService{
 		System.out.println(carsDate);
 		cars.removeAll(carsDate);
 		return cars;
+	}
+
+	@Override
+	public Car getById(Integer id_car) {
+		Car car = manager.find(Car.class, id_car);
+		return car;
 	}
 
 }

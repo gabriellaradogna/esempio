@@ -1,6 +1,7 @@
 package dao;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -9,6 +10,7 @@ import model.Car;
 public interface CarDao extends JpaRepository<Car, Integer>{
 	
 	List<Car> findAll();
+	Optional<Car> findById(Integer id_car);
 	//query singole
 	List<Car> findByCategory(String category);
 	List<Car> findByPowerSupplyIn(List<String> powerSupply);

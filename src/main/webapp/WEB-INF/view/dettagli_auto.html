@@ -32,7 +32,7 @@
       <!-- PARTE SPECIFICHE TECNICHE -->
       <gallery>
         <div class="row">
-          <!--<div class="col-sm-12 col-md-7 col-lg-7 col-xl-7 col-12"><img th:src="@{${'static/icon/' + car.id_car + '.png'}}" class="img-fluid"/></div>-->
+          <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7 col-12"><img th:src="@{${'static/icon/' + car.id_car + '.png'}}" class="img-fluid"/></div>
           <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-12 mt-2">
             <h3 class="titolo_form">Inserisci i dati per la prenotazione:</h3>
             <br/>
@@ -83,8 +83,8 @@
               <p th:text="'Marca: ' + ${car.brand}"><img src="icons8-fiat-500.gif" class="img-fluid car"/>&nbsp; </p>
               <p th:text="'Modello: ' + ${car.model}"><img src="icons8-fiat-500.gif" class="img-fluid car"/>&nbsp; </p>
               <p th:text="'Cilindrata: ' + ${car.displacement}"><img src="icons8-fiat-500.gif" class="img-fluid car"/>&nbsp; </p>
-              <p th:text="'Tipo di alimentazione' + ${car.power_supply}"><img src="icons8-fiat-500.gif" class="img-fluid car"/>&nbsp; </p>
-              <p th:text="'Numero porte: ' + ${car.number_doors}"><img src="icons8-fiat-500.gif" class="img-fluid car"/>&nbsp; </p>
+              <p th:text="'Tipo di alimentazione' + ${car.powerSupply}"><img src="icons8-fiat-500.gif" class="img-fluid car"/>&nbsp; </p>
+              <p th:text="'Numero porte: ' + ${car.numberDoors}"><img src="icons8-fiat-500.gif" class="img-fluid car"/>&nbsp; </p>
             </div>
           </div>
           <div class="col-sm-12 col-md-5 col-lg-5 col-xl-5 col-12 d-inline-flex justify-content-center m-auto mt-5">
