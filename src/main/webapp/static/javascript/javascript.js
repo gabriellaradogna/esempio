@@ -46,18 +46,3 @@ function testo(){
 function ripristinatesto(){
   this.style.fontSize = 28 + "px";
 }*/
-
-$(document).ready(function () {
-  $("#createaccount").click(function () {
-    $("#containerloginform").hide();
-    $("#containerregistrationform").show();
- });
-    $("#no").click(function () {
-      $("#secondcontainer").hide();
-      $("#thirdcontainer").show();
-    });
-      $("#yes").click(function () {
-        $("#thirdcontainer").hide();
-        $("#secondcontainer").show();
-      });
-  });
