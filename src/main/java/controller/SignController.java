@@ -17,7 +17,7 @@ import model.User;
 
 
 @Controller
-@RequestMapping("/home/sign")
+@RequestMapping("/sign")
 public class SignController {
 	
 	@Autowired

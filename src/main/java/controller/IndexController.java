@@ -69,6 +69,7 @@ public class IndexController {
 			cars = carDao.findByCategoryAndNumberDoorsIn(category, numberDoors);
 		
 		carService.filterByPrice(cars, price);
+		
 		carService.filterByDate(cars, dateStart, dateEnd);
 		
 			
