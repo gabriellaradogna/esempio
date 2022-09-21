@@ -33,18 +33,13 @@ public class CarServiceImpl implements CarService{
 		for(Car c : cars) {
 			List<RentalCars> prenotazioni = c.getRentalCars();
 			for(RentalCars rc : prenotazioni) {
-				/*if(rc.getRental_start().compareTo(dateStart)>=0 && rc.getRental_end().compareTo(dateEnd)>=0)
-				{
-					System.out.println("macchine tolte" + c.getId_car() + "  rs : " + rc.getRental_start());
-					carsDate.add(c);
-					}*/
-					if(dateStart.compareTo(rc.getRental_start())==1) 
+					if(dateStart.compareTo(rc.getRental_start())>=0) 
 					{
-						if(dateStart.compareTo(rc.getRental_end())==-1)
+						if(dateStart.compareTo(rc.getRental_end())<=0)
 						carsDate.add(c);	
-					}else if(dateStart.compareTo(rc.getRental_start())==-1) {
-						if(dateEnd.compareTo(rc.getRental_start()) == 1) {
-							
+					}else if(dateStart.compareTo(rc.getRental_start())<=0) {
+						if(dateEnd.compareTo(rc.getRental_start()) >=0) {
+						carsDate.add(c);
 						}
 					}
 				}
