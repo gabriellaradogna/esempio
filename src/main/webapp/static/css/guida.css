@@ -5,8 +5,10 @@
   width: 100%;
   /*height: 1500px;*/
   margin: auto;
+
+
 }
-/* -- HEADER -- */
+
 header {
   width: 100%;
   height: 300px;
@@ -29,7 +31,7 @@ header {
   margin-top: 50px;
   margin-left: 0px;
 }
-/* -- MAIN -- */
+
 main{
   display: flex;
   flex-direction: row;
@@ -40,17 +42,20 @@ main{
 }
 
 aside {
-  position: relative;
+  background-image: url("/noleggioAuto/static/image/mappa-bari-badova.jpg");
   width: 20%;
   border: 2.5px black solid;
-  /*border-bottom: 0px;*/
-  padding: 0px 0.5% 0px 0.5%;
   border-radius: 20px;
+  background-size: cover;
+  background-position-x: -120px;
+
 }
 
 #contenitore2{
   width: 80%;
   height: 100%;
+
+
 }
 nav {
   position: relative;
@@ -97,11 +102,11 @@ nav a:hover{
 /* GALLERY da non modificare altriemtni si sminchia #indirizzi*/
 gallery {
   width: 100%;
-  height: 740px;
+  height: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  overflow-y: scroll;
+
 
 }
 
@@ -158,7 +163,7 @@ footer{
 CONTATTI
  */
 .immagine_audi{
-  background-image: url("static/image/audi_sfondo.jpg");
+  background-image: url("/noleggioAuto/static/image/audi_sfondo.jpg");
   background-size: cover ;
   width: 100%;
   position: center;
@@ -228,7 +233,7 @@ text{
 @media only screen and (max-width: 986px) {
 
   .immagine_audi{
-    background-image: url("audi_sfondo.jpg");
+    background-image: url("/noleggioAuto/static/image/audi_sfondo.jpg");
     background-color: black;
     opacity: 0.75;
     width: 100%;
