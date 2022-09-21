@@ -3,11 +3,16 @@ package model;
 import java.io.Serializable;
 import java.sql.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 
@@ -27,17 +32,19 @@ public class RentalCars implements Serializable{
 	private int id_rental;
 	
 
-	@Column
-	private int id_user;
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "id_user", referencedColumnName = "id_user")
+	private User user;
 	
-	@Column
-	private int id_car;
+	@ManyToOne(cascade = CascadeType.REFRESH)
+	@JoinColumn(name = "id_car", referencedColumnName = "id_car")
+	private Car car;
 	
-	@Column
+	@Column(name = "rental_start")
 	private Date rental_start; 
 	
 	
-	@Column
+	@Column(name = "rental_end")
 	private Date rental_end;
 	
 	
@@ -57,28 +64,23 @@ public class RentalCars implements Serializable{
 
 
 
-	public int getId_user() {
-		return id_user;
-	}
-
-
 	
-	public void setId_user(int id_user) {
-		this.id_user = id_user;
-	}
 
+	public User getUser() {
+	return user;
+}
 
-	
-	public int getId_car() {
-		return id_car;
-	}
+public void setUser(User user) {
+	this.user = user;
+}
 
+public Car getCar() {
+	return car;
+}
 
-
-	public void setId_car(int id_car) {
-		this.id_car = id_car;
-	}
-
+public void setCar(Car car) {
+	this.car = car;
+}
 
 	public Date getRental_start() {
 		return rental_start;
