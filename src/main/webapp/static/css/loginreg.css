@@ -186,7 +186,7 @@ gallery {
   margin-right: auto;
   margin-left: auto;
   margin-top: 20px;
-  background-image: url("logo.jpg");
+  background-image: url("/static/image/logorent(1).jpg");
   background-size:contain;
   background-repeat: no-repeat;
 }
@@ -208,6 +208,7 @@ gallery {
   background-color:white ;
   border: 1px solid black;
   font-family:Barlow;
+  border-radius:20px
 }
 
 #question {
