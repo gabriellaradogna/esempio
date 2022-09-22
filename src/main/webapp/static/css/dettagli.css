@@ -174,22 +174,6 @@ gallery {
   height: auto;
 }
 
-.scheda{
-  position: relative;
-  float: left;
-  width: 46%;
-  height: 46%;
-  margin: 1% auto;
-  border: 1px solid grey;
-}
-.scheda_sx, .scheda_dx{
-  display: flex;
-  float: left;
-  width: 300px;
-  height: 300px;
-  margin: 1%;
-  border: 1px solid grey;
-}
 
 footer{
   height: 100px;
@@ -235,22 +219,47 @@ footer{
 
 /* PARTE AGGIUNTIVA */
 
-.bottone{
-  margin-top: 70px;
-  margin-bottom: 270px;
-}
-
 .specifiche{
   color: black;
+}
+.form-precomp{
+	margin-right:auto;
+	margin-left: auto;
+}
+.titolo_form {
+    text-align: center;
+    font-family: Barlow;
+    font-size: 34px;
+  }
+.th_table{
+	font-size: 25px;
+    font-family: Barlow;
+    padding-bottom: 7px;
 }
 
 .riga_footer{
   margin-top: 10px;
 }
-
+.m_auto{
+	padding-top:0px;
+}
+.title_dettagli{
+	font-family: Barlow;
+	font-size: 34px;
+	padding-left: 95px;
+}
+.dettagli{
+	margin-right: 3rem!important;
+    margin-left: 7rem!important;
+}
 .car{
-  width: 40px;
-  height: 40px;
+  width: 65px;
+  height: auto;
+  padding-bottom: 7px;
+}
+.text_dettagli{
+	font-family: Barlow;
+	font-size:27px;
 }
 
 .dati{
@@ -258,10 +267,51 @@ footer{
   background: white;
   padding-left: 10px;
   font-family: Barlow;
+  width: 230px;
+  border-radius: 20px;
+  margin-left: 5%;
+  font-size: 22px;
+}
+.data-pren{
+  border-radius: 15px;
+  background: white;
+  padding-left: 10px;
+  font-family: Barlow;
+  width: 185px;
+  border-radius: 20px;
+  margin-left: 5%;
+  font-size: 22px;
+}
+/*.dati:focus{
+  border: 2px solid black;
+}*/
+#title_disponibilità{
+	font-size: 34px;
+	font-family: Barlow;
+}
+#disponibilità{
+	font-size: 25px;
+	font-family: Barlow;
+	
+}
+#button-prenotazione{
+border-radius: 20px;
+text-align: center;
+  font-family: Barlow;
+  font-size: 20px;
+  float: left;
+  width: auto;
+  padding: 0px 20px 4px 20px;
+  margin: 6%;
+  margin-left:35%;
+  background-color: black;
+  color: white
 }
 
-.dati:focus{
-  border: 2px solid black;
+
+.bottone{
+  margin-top: 70px;
+  margin-bottom: 270px;
 }
 
 @media only screen and (max-width: 1628px) {
@@ -300,9 +350,7 @@ footer{
     text-align: center;
   }
 
-  .titolo_form {
-    text-align: center;
-  }
+  
 }
 
 @media only screen and (max-width: 701px) {

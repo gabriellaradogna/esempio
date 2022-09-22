@@ -26,6 +26,7 @@ function ripristinasfondo () {
 
 $(document).ready(function () {
   $("#createaccount").click(function () {
+	alert("ciao");
     $("#containerloginform").hide();
     $("#containerregistrationform").show();
  });

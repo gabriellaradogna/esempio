@@ -23,7 +23,7 @@
             </br>
           <h2 class="aside_h"><strong>Modelli</strong></h2>
           <div id="aside_li1"><li><a href="?category=Utilitaria"><img src="static/image/Utilitaria.jpg" class="img_aside">&nbsp;&nbsp;Utilitarie</a></li></div>
-          <div id="aside_li2"><li><a href="?category=Berlina"><img src="static/image/Berlina.jpg" class="img_aside">&nbsp;&nbsp;Berlina</a></li></div>
+          <div id="aside_li2"><li><a href="?category=Berlina"><img src="static/image/Berlina.jpg" class="img_aside">&nbsp;&nbsp;Berline</a></li></div>
           <div id="aside_li3"><li><a href="?category=Suv"><img src="static/image/Suv.jpg" class="img_aside">&nbsp;&nbsp;Suv</a></li></div>
           <div id="aside_li4"><li><a href="?category=Furgone"><img src="static/image/Furgone.jpg" class="img_aside">&nbsp;&nbsp;Furgoni</a></li></div>
           </br>
@@ -83,15 +83,16 @@
       </nav>
       <!-- PARTE SPECIFICHE TECNICHE -->
       <gallery>
-        <div class="row">
+        <div class="row form-precomp">
           <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7 col-12 d-block text-center my-auto"><img th:src="@{${'static/icon/' + car.id_car + '.png'}}"/></div>
           <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-12 mt-2">
-            <h3 class="titolo_form">Inserisci i dati per la prenotazione:</h3>
+          </br>
+            <h3 class="titolo_form">I tuoi dati per la prenotazione:</h3>
             <br/>
             <form method="post">
               <table align="center">
                 <tr>
-                  <th>Nome: </th>
+                  <th class="th_table">Nome: &nbsp;</th>
                   <td><input type="text" maxlength="20" class="dati"/></td>
                 </tr>
                 <tr>
@@ -99,7 +100,7 @@
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
-                  <th>Cognome: </th>
+                  <th class="th_table">Cognome: &nbsp;</th>
                   <td><input type="text" maxlength="20" class="dati"/></td>
                 </tr>
                 <tr>
@@ -107,7 +108,7 @@
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
-                  <th>Codice fiscale: </th>
+                  <th class="th_table">Codice fiscale: &nbsp;</th>
                   <td><input type="text" maxlength="16" class="dati"/></td>
                 </tr>
                 <tr>
@@ -115,7 +116,7 @@
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
-                  <th>Numero di telefono:&nbsp;</th>
+                  <th class="th_table">Telefono: &nbsp;&nbsp;</th>
                   <td><input type="tel" maxlength="10" class="dati"/></td>
                 </tr>
                 <tr>
@@ -123,28 +124,28 @@
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
-                  <th>E-mail: </th>
+                  <th class="th_table">E-mail: &nbsp;</th>
                   <td><input type="email" maxlength="50" class="dati" ></td>
                 </tr>
               </table>
             </form>
           </div>
           <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7 col-12 m-auto mt-5" style="color: black">
-            <p class="mx-3">Specifiche tecniche:</p>
-            <div class="mx-5">
-             <div><img src="static/image/icons8-fiat-500.gif" class="img-fluid car"/>&nbsp;<span th:text="'Marca: ' + ${car.brand}"></span></div>
-              <div><img src="static/image/icons8-fiat-500.gif" class="img-fluid car"/>&nbsp;<span th:text="'Modello: ' + ${car.model}"></span></div>
-              <div><img src="static/image/icons8-fiat-500.gif" class="img-fluid car"/>&nbsp;<span th:text="'Cilindrata: ' + ${car.displacement}"></span></div>
-              <div><img src="static/image/icons8-fiat-500.gif" class="img-fluid car"/>&nbsp;<span th:text="'Tipo di alimentazione: ' + ${car.powerSupply}"></span></div>
-              <div><img src="static/image/icons8-fiat-500.gif" class="img-fluid car"/>&nbsp;<span th:text="'Numero porte: ' + ${car.numberDoors}"></span></div>
+            <p class="mx-3 title_dettagli">Specifiche tecniche:</p>
+            <div class="mx-5 dettagli">
+             <div><img src="static/image/icons8-fiat-500.gif" class="img-fluid car"/>&nbsp;<span class="text_dettagli" th:text="'Marca: ' + ${car.brand}"></span></div>
+              <div><img src="static/image/icons8-fiat-500.gif" class="img-fluid car"/>&nbsp;<span class="text_dettagli" th:text="'Modello: ' + ${car.model}"></span></div>
+              <div><img src="static/image/icons8-fiat-500.gif" class="img-fluid car"/>&nbsp;<span class="text_dettagli" th:text="'Cilindrata: ' + ${car.displacement}"></span></div>
+              <div><img src="static/image/icons8-fiat-500.gif" class="img-fluid car"/>&nbsp;<span class="text_dettagli" th:text="'Tipo di alimentazione: ' + ${car.powerSupply}"></span></div>
+              <div><img src="static/image/icons8-fiat-500.gif" class="img-fluid car"/>&nbsp;<span class="text_dettagli" th:text="'Numero porte: ' + ${car.numberDoors}"></span></div>
             </div>
           </div>
           <div class="col-sm-12 col-md-5 col-lg-5 col-xl-5 col-12 d-inline-flex justify-content-center m-auto mt-5">
-            <p>Verifica la disponibilità:<br/><br/>
-              Da: <input type="date" class="dati"/>&nbsp;&nbsp;&nbsp;<br/><br/>
-              A:&nbsp;&nbsp;&nbsp;<input type="date" class="dati"/>&nbsp;&nbsp;&nbsp;
-            </p>
-            <div class="btn btn-outline-primary bottone">Prenota</div>
+            <div id="disponibilità"><p id="title_disponibilità">Verifica la disponibilità:<br/></p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Da: <input type="date" class="data-pren"/>&nbsp;&nbsp;&nbsp;<br/><br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A:&nbsp;&nbsp;&nbsp;<input type="date" class="data-pren"/>&nbsp;&nbsp;&nbsp;
+            <input type="submit" id="button-prenotazione" name="prenota" value="Prenota">
+            </div>
           </div>
         </div>
       </gallery>
