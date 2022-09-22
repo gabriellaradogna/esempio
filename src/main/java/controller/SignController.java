@@ -30,7 +30,7 @@ public class SignController {
 	@GetMapping
 	public String getPage(Model model){
 		
-		
+		model.addAttribute("user", new User());
 		
 		return "login";
 	}
@@ -61,13 +61,10 @@ public class SignController {
 		return "userarea";
 	}
 
-	
-	@PostMapping
-	public String registerUser(@Valid @ModelAttribute("user") User user, BindingResult result) 
+	@PostMapping("/reg")
+	public String userProva(@Valid @ModelAttribute("user") User user, BindingResult result )
 	{
-		
+		System.out.println(user.getFirst_name());
 		return null;
-		
 	}
-
 }
