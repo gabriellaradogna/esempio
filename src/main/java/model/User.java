@@ -73,6 +73,17 @@ public class User implements Serializable {
 	@Column
 	private String telephone;
 	
+	@Column(name = "mail")
+	private String mail;
+	
+	public String getMail() {
+		return mail;
+	}
+
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
+
 	@Pattern(regexp = "[a-zA-Z0-9\\s'àèìòù.-]{1,255}", message = "{error.charsnotallow}")
 	@Column
 	private String address;
