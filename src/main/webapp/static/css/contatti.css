@@ -39,12 +39,16 @@ main{
 
 aside {
 
-  background-image: url("/noleggioAuto/static/image/mappa-bari-badova.jpg");
+  background-image: url("/noleggioAuto/static/image/bari-padova2.jpg");
   width: 20%;
   border: 2.5px black solid;
-  border-radius: 20px;
+  border-bottom: 0px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
   background-size: cover;
-  background-position-x: -120px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-position-x: -50px;
 }
 
 #contenitore2{
@@ -57,7 +61,8 @@ nav {
   height: 60px;
   display: block;
   background-color: black;
-  border-radius: 10px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
 nav ul{
   width: 100%;
@@ -173,59 +178,76 @@ footer{
 
 
 }
-h2{
+h1{
   padding-left: 50px;
-  font-size: 50px;
   color: white ;
-  text-shadow: 3px 3px 3px black;  /*ombra*/
-
+  text-shadow: 3px 3px 3px black;
+  padding-top: 0px;
 }
 
 #contact{
 
-  padding-left: 50px;
-  padding-bottom:0px;
-  padding-top: 0px;
   width: 100%;
-  height: 10%;
-  position: center;
-  text-shadow: 0 0 5px black;  /*ombra*/
+  height: 100%;
+  text-shadow: 0 0 5px black;
   color: white;
   display: flex;
-
+  opacity: 0.65;
+  background: black;
+  padding-top: 10%;
+  padding-right: 5%;
 }
 
 #contact1{
-
-  background: black;
-  opacity: 0.65;
-  padding: 250px 150px 200px 125px;
-
+  width: 50%;
+  text-align: right;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  text-align:center;
+  flex-flow: row-reverse nowrap;
+  margin-top: 50px;
 }
-#contact2 {
-
-  background: black;
-  opacity: 0.65;
-  padding:250px 100px 200px 125px;
-
+#contact2{
+  width: 50%;
+  text-align: right;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  text-align:center;
+  flex-flow: row-reverse nowrap;
+  margin-top: 50px;
 }
 
 #indirizzi{
 
-  justify-content: center;
+  position: center;
   text-align: center;
+  padding-bottom: 10%;
+  text-shadow: 0 0 80px black;
+  color: white;
+  padding-left:10%;
+  padding-right:5%;
+
+
+
+
 }
 #localita{
-  position: relative;
+  text-shadow: 0 0 5px black;
+  color: white;
   text-align: center;
   color: white;
+  opacity: 0.65;
+
 }
 #bari{
+  text-shadow: 0 0 5px black;
+  color: white;
   position: relative;
   text-align: center;
 
 }
 #padova{
+  color: white;
   position: relative;
   text-align: center;
   color: white;
