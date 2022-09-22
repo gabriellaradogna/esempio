@@ -4,9 +4,6 @@ package controller;
 
 import java.sql.Date;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -35,13 +32,10 @@ public class SignController {
 	}
 	
 	@PostMapping("/login")
-	public String login(Model model,HttpSession session, @RequestParam("username") String username, @RequestParam("password") String password) 
+	public String login(Model model, @RequestParam("username") String username, @RequestParam("password") String password) 
 	{
 		for(User u : userDao.findAll()) {
-			if(username.equals(u.getUsername()) && password.equals(u.getPassword())) 
-			{
-				
-				session.setAttribute("loggedUser", u);
+			if(username.equals(u.getUsername()) && password.equals(u.getPassword())) {
 				model.addAttribute("loggedUser", u);
 				return "userarea";
 			}
