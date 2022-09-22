@@ -4,6 +4,7 @@ package controller;
 
 import java.sql.Date;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,19 +29,21 @@ public class SignController {
 	UserDao userDao;
 
 	@GetMapping
-	public String getPage(Model model){
+	public String getPage(Model model, HttpSession session){
 		
 		model.addAttribute("user", new User());
-		
-		return "login";
+		if(session.getAttribute("loggedUser")==null)
+			return "login";
+		else 
+			return "userarea";
 	}
 	
 	@PostMapping("/login")
-	public String login(Model model, @RequestParam("username") String username, @RequestParam("password") String password) 
+	public String login(Model model, @RequestParam("username") String username, @RequestParam("password") String password, HttpSession session) 
 	{
 		for(User u : userDao.findAll()) {
 			if(username.equals(u.getUsername()) && password.equals(u.getPassword())) {
-				model.addAttribute("loggedUser", u);
+				session.setAttribute("loggedUser", u);
 				return "userarea";
 			}
 		}
@@ -62,9 +65,11 @@ public class SignController {
 	}
 
 	@PostMapping("/reg")
-	public String userProva(@Valid @ModelAttribute("user") User user, BindingResult result )
+	public String userProva(@Valid @ModelAttribute("user") User user, BindingResult result, HttpSession session )
 	{
 		System.out.println(user.getFirst_name());
-		return null;
+		userDao.save(user);
+		session.setAttribute("loggedUser", user);
+		return "redirect:/";
 	}
 }

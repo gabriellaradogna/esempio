@@ -92,7 +92,7 @@
               <table align="center">
                 <tr>
                   <th>Nome: </th>
-                  <td><input type="text" maxlength="20" class="dati"/></td>
+                  <td><input type="text" maxlength="20" class="dati" th:value="${session.loggedUser.getFirst_name()}"/></td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
@@ -100,7 +100,7 @@
                 </tr>
                 <tr>
                   <th>Cognome: </th>
-                  <td><input type="text" maxlength="20" class="dati"/></td>
+                  <td><input type="text" maxlength="20" class="dati" th:value="${session.loggedUser.getLast_name()}"/></td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
@@ -108,7 +108,7 @@
                 </tr>
                 <tr>
                   <th>Codice fiscale: </th>
-                  <td><input type="text" maxlength="16" class="dati"/></td>
+                  <td><input type="text" maxlength="16" class="dati" th:value="${session.loggedUser.getFiscal_code()}"/></td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
@@ -116,7 +116,7 @@
                 </tr>
                 <tr>
                   <th>Numero di telefono:&nbsp;</th>
-                  <td><input type="tel" maxlength="10" class="dati"/></td>
+                  <td><input type="tel" maxlength="10" class="dati"th:value="${session.loggedUser.getTelephone()}"/></td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
@@ -124,7 +124,7 @@
                 </tr>
                 <tr>
                   <th>E-mail: </th>
-                  <td><input type="email" maxlength="50" class="dati" ></td>
+                  <td><input type="email" maxlength="50" class="dati" th:value="${session.loggedUser.getMail}" ></td>
                 </tr>
               </table>
             </form>
