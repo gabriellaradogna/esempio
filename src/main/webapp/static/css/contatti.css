@@ -200,7 +200,6 @@ h2{
   background: black;
   opacity: 0.65;
   padding: 250px 150px 200px 125px;
-  position:center;
 
 }
 #contact2 {
@@ -208,7 +207,6 @@ h2{
   background: black;
   opacity: 0.65;
   padding:250px 100px 200px 125px;
-  position:center;
 
 }
 
@@ -256,7 +254,6 @@ h2{
   #contact1{
     width: 50%;
 padding-left: 20px;
-position:center;
   }
 #contact{
   width: 100%;
@@ -266,7 +263,6 @@ position:center;
 #contact2{
   width: 50%;
   padding-left: 40px;
-  position:center;
 
 }
 

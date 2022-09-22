@@ -41,7 +41,7 @@ aside {
   position: relative;
   width: 20%;
   border: 2.5px black solid;
-  border-bottom: 0px;
+  /*border-bottom: 0px;*/
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   background-color:black;
