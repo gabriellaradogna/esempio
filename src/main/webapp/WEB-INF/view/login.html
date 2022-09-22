@@ -47,42 +47,42 @@
           <div id="containerregistrationform">
             <div id="formregistration">
               <div class="subtitle1">Dati anagrafici:</div>
-              <form method="post" action="/signin">
+              <form method="post" th:object="${user}">
                 <div id="firstcontainer">
-                  <div class="form2"><input type="text" name="nome" class="fieldsform1" required placeholder="Nome"></div>
-                  <div class="form2"><input type="text" name="cognome" class="fieldsform1" required placeholder="Cognome"></div>
-                  <div class="form2"><input type="text" name="telefono" class="fieldsform1" required placeholder="Telefono"></div>
-                  <div class="form2"><input type="text" name="email" class="fieldsform1" required placeholder="E-mail"></div>
+                  <div class="form2"><input type="text" th:field="*{first_name}" class="fieldsform1" required placeholder="Nome"></div>
+                  <div class="form2"><input type="text" th:field="*{last_name}" class="fieldsform1" required placeholder="Cognome"></div>
+                  <div class="form2"><input type="text" th:field="*{telephone}" class="fieldsform1" required placeholder="Telefono"></div>
+                  <div class="form2"><input type="text" th:field="*{mail}" class="fieldsform1" required placeholder="E-mail"></div>
                   <div id="thirdcontainer">
-                    <div id="form4"><input type="text" name="codice_fiscale" class="fieldsform1" required placeholder="Codice fiscale">
+                    <div id="form4"><input type="text" th:field="*{fiscal_code}" class="fieldsform1" required placeholder="Codice fiscale">
                     </div>
                   </div>
                 </div>
                 <div class="subtitle1" id="subtitle2">Sei un'azienda?
-                  <input type="radio" name="genere" id="yes"/>Sì
-                  <input type="radio" name="genere" id="no"/>No
+                  <input type="radio"  id="yes"/>Sì
+                  <input type="radio" id="no"/>No
                 </div>
                 <div id="secondcontainer">
-                  <div class="form3" ><input type="text" name="ragione_sociale" class="fieldsform1"  placeholder="Ragione sociale"></div>
-                  <div class="form2"><input type="text" name="ragione_sociale" class="fieldsform1" placeholder="Ragione sociale"></div>
-                  <div class="form2"><input type="text" name="partita_iva" class="fieldsform1"  placeholder="Partita IVA"></div>
-                  <div class="form3"><input type="text" name="ragione_sociale" class="fieldsform1" placeholder="Ragione sociale"></div>
+                  <div class="form3" ><input type="text" class="fieldsform1"  placeholder="Ragione sociale"></div>
+                  <div class="form2"><input type="text" th:field="*{business_name}" class="fieldsform1" placeholder="Ragione sociale"></div>
+                  <div class="form2"><input type="text" th:field="*{vat_number}" class="fieldsform1"  placeholder="Partita IVA"></div>
+                  <div class="form3"><input type="text" class="fieldsform1" placeholder="Ragione sociale"></div>
                 </div>
                 <div class="subtitle1">Indirizzo di recapito:</div>
                 <div id="fourcontainer">
-                  <div class="form2"><input type="text" name="indirizzo" class="fieldsform1" required placeholder="Indirizzo"></div>
-                  <div class="form2"><input type="text" name="localita" class="fieldsform1" required placeholder="Località"></div>
-                  <div class="form2"><input type="text" name="provincia" class="fieldsform1" required placeholder="Provincia"></div>
-                  <div class="form2"><input type="text" name="cap" class="fieldsform1" required placeholder="Cap"></div>
+                  <div class="form2"><input type="text" th:field="*{address}" class="fieldsform1" required placeholder="Indirizzo"></div>
+                  <div class="form2"><input type="text" th:field="*{locality}" class="fieldsform1" required placeholder="Località"></div>
+                  <div class="form2"><input type="text" th:field="*{province}" class="fieldsform1" required placeholder="Provincia"></div>
+                  <div class="form2"><input type="text" th:field="*{postal_code}" class="fieldsform1" required placeholder="Cap"></div>
                 </div>
 
 
                 <div class="subtitle1">Credenziali utente:</div>
                 <div id="fivecontainer">
-                  <div class="form3" ><input type="text" name="ragione_sociale" class="fieldsform1"  placeholder="Scegli username"></div>
-                  <div class="form2"><input type="text" name="username" class="fieldsform1" required placeholder="Scegli username"></div>
-                  <div class="form2"><input type="password" name="password" class=fieldsform1 required placeholder="Scegli password"></div>
-                  <div class="form3" ><input type="text" name="ragione_sociale" class="fieldsform1"  placeholder="Scegli username"></div>
+                  <div class="form3" ><input type="text"class="fieldsform1"  placeholder="Scegli username"></div>
+                  <div class="form2"><input type="text" th:field="*{username}" class="fieldsform1" required placeholder="Scegli username"></div>
+                  <div class="form2"><input type="password" th:field="*{password}" class=fieldsform1 required placeholder="Scegli password"></div>
+                  <div class="form3" ><input type="text" class="fieldsform1"  placeholder="Scegli username"></div>
                 </div>
                 <div id="form5"><input type="submit" name="submit" class="fieldsform1" value="Registrati"></div>
               </form>
