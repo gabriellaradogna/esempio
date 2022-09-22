@@ -37,89 +37,6 @@ main{
   height: 80%;
 }
 
-aside {
-  position: relative;
-  width: 20%;
-  height: 935px;
-  border: 2.5px black solid;
-  /*border-bottom: 0px;*/
-  padding: 0px 0.5% 0px 0.5%;
-  border-radius: 20px;
-}
-aside ul{
-  list-style: none;
-  font-family: Barlow;
-}
-.aside_h{
-  font-family: Barlow;
-  color: black;
-  font-size: 33px;
-  margin: auto;
-}
-.aside_h2{
-  font-family: Barlow;
-  color: black;
-  font-size: 28px;
-  margin-left: 7px;
-}
-#aside_li1,#aside_li2,#aside_li3,#aside_li4{
-  margin-left: 15px;
-}
-aside a{
-  text-decoration-line: none;
-  color: #51585e;
-  font-size: 30px;
-  line-height: 130%;
-}
-aside a:hover {
-  color: #000000;
-}
-.img_aside{
-  width: 45px;
-  margin-bottom: 3px;
-}
-#price{
-  width:140px;
-  font-family: Barlow;
-  margin-left: 15px;
-}
-.span_date{
-  font-size: 28px;
-  font-family: Barlow;
-  color: #51585e;
-  margin-left: 15px;
-}
-.date{
-  width: 140px;
-  margin: 2%;
-  font-size: 20px;
-  font-family: Barlow;
-}
-.label_checkbox{
-  font-size: 26px;
-  font-family: Barlow;
-  color: #51585e;
-  line-height: 120%;
-}
-#checkbox_1,#checkbox_2{
-  margin-left: 15px;
-}
-#aside_button1,#aside_button2 {
-  text-align: center;
-  font-family: Barlow;
-  font-size: 20px;
-  float: left;
-  width: auto;
-  padding: 0px 20px 4px 20px;
-  margin: 2%;
-  text-align: center;
-  border-radius: 20px;
-  height: auto;
-  background-color: black;
-  border: none;
-  color: white;
-}
-
 #contenitore2{
   width: 80%;
   height: 100%;
@@ -208,6 +125,9 @@ gallery {
   background-color:white ;
   border: 1px solid black;
   font-family:Barlow;
+  border-radius:20px;
+  padding-left:15px;
+  padding-right:15px;
 }
 
 #question {
@@ -227,6 +147,9 @@ gallery {
   color: black;
   background-color: white;
   font-size: 25px;
+  border-radius:20px;
+  padding-left:15px;
+  padding-right:15px;
 }
 
 #containerregistrationform {

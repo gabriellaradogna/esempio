@@ -15,7 +15,7 @@
     <video id="video_header" autoplay loop muted>
       <source src="static/video/macchine2.mp4" type="video/mp4">
     </video>
-    <img src="static/image/ragazzo2.png" id="img_ragazzo">
+    <img id="img_ragazzo" src="static/image/ragazzo.jpeg">
   </header>
     <main>
       <aside>
@@ -89,10 +89,8 @@
         <div class="scheda" th:each = "car : ${cars}" >
           <div class="scheda_up"><img class ="immagine" th:src = "@{'static/icon/' + ${car.id_car} + '.png'}"></a></div>
           <div class="scheda_down">
-          <div class="info"><a href="dettagli_auto" th:text = "${car.brand} + '  ' + ${car.model}"></a></div>
-           
-            </br>
-            <div class="prezzo" th:text = "${car.dailyPrice} + '&euro;'" &euro;></div>
+          <div class="info"><a th:href="@{dettagli?idCar={id}(id=${car.id_car})}" th:text = "${car.brand} + '  ' + ${car.model}" style="color: black"></a>
+          </br><strong><p id="prezzo" th:text = "${car.dailyPrice} + '&nbsp;&nbsp;Euro al giorno'"></p></strong></div>
           </div>
         </div>
 
