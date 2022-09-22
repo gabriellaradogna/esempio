@@ -5,20 +5,72 @@
   <title>Dettagli Auto</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="static/css/dettagli.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow" rel="stylesheet">
 </head>
 <body>
 <div id="contenitore">
   <header>
-    <img src="static/image/logorent.jpg" id="img_logo"/>
-    <video id="video_header" autoplay muted loop>
+    <img src="static/image/nome-logo.jpg" id="img_logo">
+    <video id="video_header" autoplay loop muted>
       <source src="static/video/macchine2.mp4" type="video/mp4">
     </video>
-    <img src="static/image/ragazzo2.png" id="img_ragazzo"/>
+    <img id="img_ragazzo" src="static/image/ragazzo.jpeg">
   </header>
   <main>
-    <aside>
-
-    </aside>
+	<aside>
+        <ul>
+          <form method="get">
+            </br>
+          <h2 class="aside_h"><strong>Modelli</strong></h2>
+          <div id="aside_li1"><li><a href="?category=Utilitaria"><img src="static/image/Utilitaria.jpg" class="img_aside">&nbsp;&nbsp;Utilitarie</a></li></div>
+          <div id="aside_li2"><li><a href="?category=Berlina"><img src="static/image/Berlina.jpg" class="img_aside">&nbsp;&nbsp;Berlina</a></li></div>
+          <div id="aside_li3"><li><a href="?category=Suv"><img src="static/image/Suv.jpg" class="img_aside">&nbsp;&nbsp;Suv</a></li></div>
+          <div id="aside_li4"><li><a href="?category=Furgone"><img src="static/image/Furgone.jpg" class="img_aside">&nbsp;&nbsp;Furgoni</a></li></div>
+          </br>
+          </br>
+          <h2 class="aside_h"><strong>Ricerca avanzata</strong></h2>
+          <h2 class="aside_h2">Prezzo giornaliero</h2>
+            <input id="price" type="range" name="price" style="color: #51585e" value="405" min="85" max="405" oninput="this.nextElementSibling.value = 'Fino a ' + this.value + '€'">
+          <output id="output_price">Fino a 405 &euro;</output>
+          </br>
+          </br>
+          <h2 class="aside_h2">Date</h2>
+          <span class="span_date">da</span>&nbsp;&nbsp;
+          <input type="date" class="date" name="dateStart"
+                 value="2022-09-18"
+                 min="2022-09-19" max="2024-12-31"></br>
+          <span class="span_date">a </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="date" class="date" name="dateEnd"
+                 value="2022-09-19"
+                 min="2022-09-19" max="2024-12-31">
+          </br>
+          </br>
+          <h2 class="aside_h2">Alimentazione</h2>
+          <div id="checkbox_1">
+            <input type="checkbox" class="power_supply" name="powerSupply" value="Benzina" style="width : 20px; height : 20px;">
+            <label class="label_checkbox">&nbsp; Benzina</label><br>
+            <input type="checkbox" class="power_supply" name="powerSupply" value="Diesel" style="width : 20px; height : 20px;">
+            <label class="label_checkbox">&nbsp; Diesel</label><br>
+            <input type="checkbox" class="power_supply" name="powerSupply" value="Elettrica" style="width : 20px; height : 20px;">
+            <label class="label_checkbox">&nbsp; Elettrica</label><br>
+            <input type="checkbox" class="power_supply" name="powerSupply" value="Gpl" style="width : 20px; height : 20px;">
+            <label class="label_checkbox">&nbsp; Gpl</label><br>
+            <input type="checkbox" class="power_supply" name="powerSupply" value="Ibrida" style="width : 20px; height : 20px;">
+            <label class="label_checkbox">&nbsp; Ibrida</label>
+          </div>
+          </br>
+          <h2 class="aside_h2">Numero porte</h2>
+          <div id="checkbox_2">
+            <input type="checkbox" class="number_doors" name="numberDoors" value="3" style="width : 20px; height : 20px;">
+            <label class="label_checkbox">&nbsp; 3</label><br>
+            <input type="checkbox" class="number_doors" name="numberDoors" value="5" style="width : 20px; height : 20px;">
+            <label class="label_checkbox">&nbsp; 5</label>
+          </div>
+            <input type="submit" id="aside_button1" name="invia" value="Invia">
+            <input type="button" id="aside_button2" name="azzera" value="Azzera">
+          </form>
+        </ul>
+      </aside>
     <div id="contenitore2">
       <nav>
         <ul>
@@ -77,10 +129,10 @@
               </table>
             </form>
           </div>
-          <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7 col-12 m-auto mt-5">
+          <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7 col-12 m-auto mt-5" style="color: black">
             <p class="mx-3">Specifiche tecniche:</p>
             <div class="mx-5">
-              <div><img src="static/image/icons8-fiat-500.gif" class="img-fluid car"/>&nbsp;<span th:text="'Marca: ' + ${car.brand}"></span></div>
+             <div><img src="static/image/icons8-fiat-500.gif" class="img-fluid car"/>&nbsp;<span th:text="'Marca: ' + ${car.brand}"></span></div>
               <div><img src="static/image/icons8-fiat-500.gif" class="img-fluid car"/>&nbsp;<span th:text="'Modello: ' + ${car.model}"></span></div>
               <div><img src="static/image/icons8-fiat-500.gif" class="img-fluid car"/>&nbsp;<span th:text="'Cilindrata: ' + ${car.displacement}"></span></div>
               <div><img src="static/image/icons8-fiat-500.gif" class="img-fluid car"/>&nbsp;<span th:text="'Tipo di alimentazione: ' + ${car.powerSupply}"></span></div>
@@ -100,16 +152,16 @@
   </main>
   <footer>
     <div id="footer" class="row">
-      <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+      <div id="footer_sx" class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
         <div class="row text-center">
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">©Pugeto è un marchio registrato</div>
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">©CarRent è un marchio registrato</div>
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">Tutti i diritti riservati</div>
         </div>
       </div>
-      <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+      <div id="footer_center" class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
         <ul class="list-group list-unstyled">
           <li>Hai delle curiosita?</li>
-          <li>Contattaci alla seguente mail: <a href="mailto::Pugeto@gmail.com">Pugeto@gmail.com</a></li>
+          <li>Contattaci alla seguente mail: <a href="mailto::CarRent@gmail.com">CarRent@gmail.com</a></li>
         </ul>
       </div>
       <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 d-inline-flex justify-content-center">
