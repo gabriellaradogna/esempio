@@ -16,12 +16,12 @@ nav_li5.addEventListener("mouseover",sfondo);
 nav_li5.addEventListener("mouseout", ripristinasfondo);
 function sfondo () {
   this.style.backgroundColor = "#333333";
-  this.style.borderRadius = "40px";
+  this.style.borderRadius = "20px";
 }
 
 function ripristinasfondo () {
   this.style.backgroundColor = "#000000";
-  this.style.borderRadius = "40px";
+  this.style.borderRadius = "20px";
 }
 
 $(document).ready(function () {

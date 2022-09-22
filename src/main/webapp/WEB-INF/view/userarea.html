@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org" lang="it" class="h-100">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
-<h1>UserArea</h1>
+<h1 th:text = "'UserArea di ' + ${loggedUser.first_name} "></h1>
 </body>
 </html>
