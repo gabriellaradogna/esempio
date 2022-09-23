@@ -142,7 +142,7 @@
           </div>
           <div class="col-sm-12 col-md-5 col-lg-5 col-xl-5 col-12 d-inline-flex justify-content-center m-auto mt-5">
             <div id="disponibilità"><p id="title_disponibilità">Verifica la disponibilità:<br/></p>
-            <form action="dettagli/pren" method = "post">
+            <form th:action="'dettagli/pren?idCar=' + ${car.id_car}" method = "post">
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Da: <input type="date" th:value = "${dateStart}" name = dateStart class="data-pren"/>&nbsp;&nbsp;&nbsp;<br/><br/>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A:&nbsp;&nbsp;&nbsp;<input type="date" th:value = "${dateEnd}" name = dateEnd class="data-pren"/>&nbsp;&nbsp;&nbsp;
             <input type="submit" id="button-prenotazione" name="prenota" value="Prenota">

@@ -119,7 +119,7 @@ public class User implements Serializable {
 	@Column
 	private String password; 
 	
-	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
+	@OneToMany(mappedBy = "user", cascade = CascadeType.MERGE, fetch = FetchType.EAGER, orphanRemoval = true)
 	private List<RentalCars> rentalCars;
 	
 

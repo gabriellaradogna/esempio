@@ -76,12 +76,17 @@ public class IndexController {
 			cars = carDao.findByCategoryAndNumberDoorsIn(category, numberDoors);
 		
 		carService.filterByPrice(cars, price);
-			
+			 
 		carService.filterByDate(cars, dateStart, dateEnd);
 			
 	    model.addAttribute("cars", cars);
+	    if(dateStart != null && dateEnd != null) {
 	    session.setAttribute("dateStart", dateStart);
 	    session.setAttribute("dateEnd", dateEnd);
+	    }else {
+	    	session.setAttribute("dateStart", todayDate);
+	    	session.setAttribute("dateEnd", todayDate);
+	    }
 		return "index";
 	}
 

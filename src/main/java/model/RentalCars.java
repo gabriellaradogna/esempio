@@ -32,11 +32,11 @@ public class RentalCars implements Serializable{
 	private int id_rental;
 	
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "id_user", referencedColumnName = "id_user")
 	private User user;
 	
-	@ManyToOne(cascade = CascadeType.REFRESH)
+	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "id_car", referencedColumnName = "id_car")
 	private Car car;
 	

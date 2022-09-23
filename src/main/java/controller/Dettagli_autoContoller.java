@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 import dao.CarDao;
+import dao.RentalCarsDao;
 import model.Car;
 import model.RentalCars;
 import model.User;
@@ -33,6 +34,9 @@ public class Dettagli_autoContoller {
 	
 	@Autowired
 	CarService carService;
+	
+	@Autowired
+	RentalCarsDao rentalCarsDao;
 	
 	
 	@GetMapping
@@ -67,7 +71,9 @@ public class Dettagli_autoContoller {
 		rC.setRental_start(dateStart);
 		rC.setRental_end(dateEnd);
 		
-		return "redirect:/homepage";
+		System.out.println(rC.toString());
+		rentalCarsDao.save(rC);
+		return "redirect:/home";
 	}
 	
 }

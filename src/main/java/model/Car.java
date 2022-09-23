@@ -57,7 +57,7 @@ public class Car implements Serializable{
 	@Column(name = "daily_price")
 	private double dailyPrice;
 	
-	@OneToMany(mappedBy = "car", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
+	@OneToMany(mappedBy = "car", cascade = CascadeType.MERGE, fetch = FetchType.EAGER, orphanRemoval = true)
 	private List<RentalCars> rentalCars = new ArrayList();
 	
 
