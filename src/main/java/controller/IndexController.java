@@ -48,7 +48,7 @@ public class IndexController {
 		
 		java.util.Date tD = new java.util.Date();
 		String todayDate = new SimpleDateFormat("yyyy-MM-dd").format(tD);
-		System.out.println(todayDate);
+		
 		model.addAttribute("todayDate", todayDate);
 		
 		if(category == null && numberDoors == null && powerSupply == null)
@@ -76,12 +76,8 @@ public class IndexController {
 			cars = carDao.findByCategoryAndNumberDoorsIn(category, numberDoors);
 		
 		carService.filterByPrice(cars, price);
-		
-		
+			
 		carService.filterByDate(cars, dateStart, dateEnd);
-		
-		
-		
 			
 	    model.addAttribute("cars", cars);
 	    session.setAttribute("dateStart", dateStart);
