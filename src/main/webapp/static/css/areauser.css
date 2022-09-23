@@ -1,0 +1,440 @@
+@charset "utf-8";
+
+/* contenitore generico della pagina*/
+#contenitore {
+  width: 100%;
+  /*height: 1500px;*/
+  margin: auto;
+}
+/* -- HEADER -- */
+header {
+  width: 100%;
+  height: 300px;
+  margin: auto;
+  text-align: center;
+}
+#img_logo{
+  width: 200px;
+  height: 150px;
+  margin-top: 8px;
+}
+#video_header{
+  width: 600px;
+  height: 100px;
+}
+#img_ragazzo{
+  width: 350px;
+  height: 250px;
+  margin-top: 50px;
+  margin-left: 0px;
+}
+/* -- MAIN -- */
+main{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 80%;
+}
+/* -- ASIDE --*/
+aside {
+  position: relative;
+  width: 20%;
+  height: 950px;
+  border: 2.5px black solid;
+  /*border-bottom: 0px;*/
+  padding: 0px 0.5% 0px 0.5%;
+  border-radius: 20px;
+  background-color: lightgray;
+}
+
+#imgutente {
+  width: 110px;
+  height:110px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#userimage {
+  width: 100%;
+  height: 100%;
+}
+
+#title {
+  margin-top: 20px;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#boxdati {
+  font-family:Barlow;
+  margin-top: 30px;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.fields{
+  font-family: Barlow;
+  font-size: 20px;
+  margin-top: 15px;
+  border-radius: 20px;
+  border: 1px solid black;
+  background-color: white;
+  padding-right: 10px;
+  padding-left:10px;
+  height:40px;
+}
+
+
+#contenitore2{
+  width: 80%;
+  height: 100%;
+}
+
+
+nav {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  display: block;
+  background-color: black;
+  border-radius: 10px;
+}
+
+
+nav ul{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  padding: 0;
+  font-size: 25px;
+  font-family: Barlow;
+}
+
+
+nav li {
+  width: auto;
+  height: 60px;
+  text-align: center;
+  line-height: 55px; /* solo così sono riuscita a centrare la scritta*/
+  list-style: none;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+#nav_li1, #nav_li2, #nav_li4, #nav_li5{
+  width: 19%;
+}
+#nav_li3{
+  width: 24%;
+}
+
+
+nav a {
+  color: #bcbebf;
+  text-decoration: none!important;
+}
+nav a:hover{
+  color: white;
+}
+
+
+
+gallery {
+  width: 100%;
+  height: 890px;
+  display: flex;
+  background-image:url("usersfondo2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+#viewrent {
+  width: 100%;
+  height:890px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#benvenuto {
+  margin-top: 15px;
+  font-family: Barlow;
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+#containercards {
+  display: flex;
+  text-align: center;
+  flex-direction:row;
+  justify-content: center;
+  font-family: Barlow;
+  font-size: 20px;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.flashcards {
+  border: 1px solid black;
+  border-radius: 20px;
+  height:200px;
+  width: 200px;
+  margin:20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.iconeutente {
+  width: 90%;
+  height: 90%;
+}
+
+
+#passwordcontainer {
+  margin-top: 50px;
+  display: none;
+}
+
+#containerpassword {
+  width: 50%;
+  margin-right:auto;
+  margin-left:auto;
+  background-color:lightgray;
+}
+
+.password {
+  margin-left: 25px;
+  margin-top: 20px;
+  margin-bottom:20px;
+  font-size:25px;
+  text-align: center;
+}
+
+
+.fields1 {
+  text-align: center;
+  font-size: 25px;
+  color:black;
+  background-color:white;
+  font-family:Barlow;
+  border-radius: 20px;
+}
+
+#containerregistrationform {
+ flex: none;
+  display:none;
+}
+
+#formregistration {
+  background-color: lightgray;
+  flex: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 90%;
+  margin-right:auto;
+  margin-left:auto;
+  margin-top: 10px;
+}
+
+#firstcontainer {
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+}
+
+#secondcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#thirdcontainer {
+  display: none;
+}
+
+#fourcontainer {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#fivecontainer {
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+}
+
+.subtitle1 {
+  text-align:center;
+  font-size: 25px;
+  font-weight:bold;
+  font-family: "Lucida Grande";
+}
+
+.form2 {
+  font-family: "Lucida Grande";
+  font-size: 25px;
+  text-align: center;
+  margin: 10px;
+}
+
+#containerriepilogo {
+  flex:none;
+  border: 1px solid black;
+  display: flex;
+}
+
+#containerimgauto {
+  border: 1px solid black;
+  height: 250px;
+  width:250px;
+  flex: none;
+  float: left;
+  margin-top: 100px;
+  margin-left:50px;
+  display: none;
+}
+
+#containerdettagli {
+  margin-left: 50px;
+  float: left;
+  width: 50%;
+  font-family:Barlow;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 50px;
+  display: none;
+}
+
+#sub {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.fieldscar {
+  border: 1px solid black;
+  width: 250px;
+  margin-top: 20px;
+  border-radius: 20px;
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.scheda{
+  position: relative;
+  float: left;
+  width: 48%;
+  height: 48%;
+  margin: 1% auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*border: 2px solid black;
+  border-radius: 10%;*/
+}
+.scheda_up{
+  display: flex;
+  flex-direction: column;
+  float: left;
+  width: 100%;
+  height: 75%;
+  margin: 1%;
+  background-color: white;
+  border-radius: 10%;
+}
+.immagine{
+  position: relative; /* l'elemento si posiziona in relazione al suo contenitore, ma va configurato con altri attributi */
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  min-width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+.scheda_down{
+  display: flex;
+  flex-direction: row;
+  float: left;
+  width: 98%;
+  height: 21%;
+  margin: 0px 1% 1% 1%;
+  background-color: #f5f5f5;
+  border-radius: 30%;
+}
+.info{
+  color: black;
+  text-align: center;
+  display:flex;
+  flex-direction:column;
+}
+.prezzo{
+  color: black;
+  text-align: center;
+  display:flex;
+  flex-direction:column;
+}
+
+footer{
+  height: 100px;
+  background-color: black;
+  font-size: 15px;
+  color: white;
+  font-family: Barlow;
+}
+
+#footer{
+  padding: 20px;
+  margin: auto;
+}
+#footer_sx{
+  margin: auto;
+  line-height: 200%;
+}
+#footer_center{
+  margin: auto;
+  line-height: 200%;
+}
+
+#facebook{
+  max-width: 35px;
+  margin-left: 10px;
+}
+
+#instagram{
+  max-width: 35px;
+  margin-left: 10px;
+}
+
+#whatsapp{
+  max-width: 35px;
+  margin-left: 10px;
+}
+
+
+@media only screen and (max-width: 986px) {
+
+
+}
+

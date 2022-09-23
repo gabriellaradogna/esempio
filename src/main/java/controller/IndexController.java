@@ -70,7 +70,8 @@ public class IndexController {
 		
 		carService.filterByPrice(cars, price);
 		
-		carService.filterByDate(cars, dateStart, dateEnd);
+		if(dateStart != null && dateEnd != null)
+			carService.filterByDate(cars, dateStart, dateEnd);
 		
 			
 	    model.addAttribute("cars", cars);
