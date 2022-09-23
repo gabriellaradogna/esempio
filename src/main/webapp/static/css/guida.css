@@ -24,8 +24,8 @@ header {
   margin-left: 0;
 }
 #video_header{
-  width: 600px;
-  height: 100px;
+  width: 900px;
+  height: auto;
 }
 #img_ragazzo{
    width: auto;
@@ -188,33 +188,35 @@ h1{
   text-shadow: 3px 3px 3px white;  /*ombra*/
   font-size: xxx-large;
   padding-top: 0px;
+  font-family: Barlow;
 }
 text{
 
   color: black;
   text-shadow: 3px 3px 3px white;  /*ombra*/
   font-size: large;
+  font-family: Barlow;
 
 
 }
 
 #noleggio{
-  padding-top: 5%;
+  padding-top: 3%;
   background-color: black;
   opacity: 0.57;
   display: flex;
   color:white;
-
-
-
+font-family: Barlow;
+font-size: 19px;
 }
+
 #elenco{
   display: flex;
   font-size: 20px;
   color: white;
   text-shadow: 3px 3px 3px black;  /*ombra*/
-
 }
+
 .canone{
   font-size: larger;
   text-shadow: 3px 3px 3px black;  /*ombra*/
@@ -230,6 +232,8 @@ text{
   text-align: right;
   padding-right: 2%;
   padding-bottom: 2%;
+  font-family: Barlow;
+font-size: 19px;
 }
 #orari2{
   display: none;

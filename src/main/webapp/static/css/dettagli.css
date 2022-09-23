@@ -21,8 +21,8 @@ header {
   margin-left: 0;
 }
 #video_header{
-  width: 600px;
-  height: 100px;
+  width: 900px;
+  height: auto;
 }
 #img_ragazzo{
   width: auto;
@@ -244,6 +244,10 @@ footer{
 }
 .m_auto{
 	padding-top:0px;
+}
+.img-dettagli{
+	max-width: 100%;
+	height: auto;
 }
 .title_dettagli{
 	font-family: Barlow;
