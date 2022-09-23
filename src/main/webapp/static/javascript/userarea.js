@@ -57,4 +57,12 @@ $(document).ready(function () {
   $("#editdati, #editpassword,#noleggio").click( function () {
     $("#supporto").css("background-color","");
   });
+  $("#no").click(function () {
+      $("#secondcontainer").hide();
+      $("#thirdcontainer").show();
+    });
+      $("#yes").click(function () {
+        $("#thirdcontainer").hide();
+        $("#secondcontainer").show();
+      });
 });

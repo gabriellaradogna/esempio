@@ -14,9 +14,11 @@ header {
   text-align: center;
 }
 #img_logo{
-  width: 200px;
-  height: 150px;
-  margin-top: 8px;
+  width: 400px;
+  height: auto;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  margin-left: 0;
 }
 #video_header{
   width: 600px;
