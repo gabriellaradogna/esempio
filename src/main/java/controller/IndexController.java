@@ -3,7 +3,10 @@ package controller;
 
 
 import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.util.List;
+
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -37,12 +40,16 @@ public class IndexController {
 			@RequestParam(value = "numberDoors", required = false) List<String> numberDoors,
 			@RequestParam(value = "price", required = false) Double price,
 			@RequestParam(value = "dateStart", required = false) Date dateStart,
-			@RequestParam(value = "dateEnd", required = false) Date dateEnd
-			)
+			@RequestParam(value = "dateEnd", required = false) Date dateEnd,
+			HttpSession session)
 	{
 		List<Car> cars;
 		cars = carDao.findAll();
-	
+		
+		java.util.Date tD = new java.util.Date();
+		String todayDate = new SimpleDateFormat("yyyy-MM-dd").format(tD);
+		System.out.println(todayDate);
+		model.addAttribute("todayDate", todayDate);
 		
 		if(category == null && numberDoors == null && powerSupply == null)
 			cars = carDao.findAll();
@@ -70,11 +77,15 @@ public class IndexController {
 		
 		carService.filterByPrice(cars, price);
 		
-		if(dateStart != null && dateEnd != null)
-			carService.filterByDate(cars, dateStart, dateEnd);
+		
+		carService.filterByDate(cars, dateStart, dateEnd);
+		
+		
 		
 			
 	    model.addAttribute("cars", cars);
+	    session.setAttribute("dateStart", dateStart);
+	    session.setAttribute("dateEnd", dateEnd);
 		return "index";
 	}
 

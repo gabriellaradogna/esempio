@@ -2,7 +2,7 @@ package controller;
 
 
 
-import java.sql.Date;
+
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -35,7 +35,7 @@ public class SignController {
 		if(session.getAttribute("loggedUser")==null)
 			return "login";
 		else 
-			return "userarea";
+			return "redirect:/userarea";
 	}
 	
 	@PostMapping("/login")
@@ -44,24 +44,10 @@ public class SignController {
 		for(User u : userDao.findAll()) {
 			if(username.equals(u.getUsername()) && password.equals(u.getPassword())) {
 				session.setAttribute("loggedUser", u);
-				return "userarea";
+				return "redirect:/userarea";
 			}
 		}
 		return "redirect:/sign?le";
-	}
-	
-	@PostMapping("/signup")
-	public String signup(Model model, 
-			@RequestParam("nome") String nome,
-			@RequestParam("cognome") String cognome,
-			@RequestParam("genere") String genere,
-			@RequestParam("date") Date date,
-			@RequestParam("email") String email,
-			@RequestParam("username") String username,
-			@RequestParam("password") String password
-			)
-	{
-		return "userarea";
 	}
 
 	@PostMapping("/reg")

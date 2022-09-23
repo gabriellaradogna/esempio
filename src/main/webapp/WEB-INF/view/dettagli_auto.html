@@ -93,7 +93,7 @@
               <table align="center">
                 <tr>
                   <th class="th_table">Nome: &nbsp;</th>
-                  <td><input type="text" maxlength="20" class="dati"/></td>
+                  <td><input type="text" maxlength="20" th:value = "${preUser.first_name}" class="dati" disabled/></td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
@@ -101,7 +101,7 @@
                 </tr>
                 <tr>
                   <th class="th_table">Cognome: &nbsp;</th>
-                  <td><input type="text" maxlength="20" class="dati"/></td>
+                  <td><input type="text" maxlength="20" th:value = "${preUser.last_name}" class="dati" disabled/></td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
@@ -109,7 +109,7 @@
                 </tr>
                 <tr>
                   <th class="th_table">Codice fiscale: &nbsp;</th>
-                  <td><input type="text" maxlength="16" class="dati"/></td>
+                  <td><input type="text" maxlength="16" th:value = "${preUser.id_user}"  class="dati" disabled/></td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
@@ -117,7 +117,7 @@
                 </tr>
                 <tr>
                   <th class="th_table">Telefono: &nbsp;&nbsp;</th>
-                  <td><input type="tel" maxlength="10" class="dati"/></td>
+                  <td><input type="tel" maxlength="10" th:value = "${preUser.telephone}"  class="dati"/></td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
@@ -125,7 +125,7 @@
                 </tr>
                 <tr>
                   <th class="th_table">E-mail: &nbsp;</th>
-                  <td><input type="email" maxlength="50" class="dati" ></td>
+                  <td><input type="email" maxlength="50" th:value = "${preUser.mail}" class="dati" ></td>
                 </tr>
               </table>
             </form>
@@ -142,8 +142,8 @@
           </div>
           <div class="col-sm-12 col-md-5 col-lg-5 col-xl-5 col-12 d-inline-flex justify-content-center m-auto mt-5">
             <div id="disponibilità"><p id="title_disponibilità">Verifica la disponibilità:<br/></p>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Da: <input type="date" class="data-pren"/>&nbsp;&nbsp;&nbsp;<br/><br/>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A:&nbsp;&nbsp;&nbsp;<input type="date" class="data-pren"/>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Da: <input type="date" th:value = "${dateStart}" class="data-pren"/>&nbsp;&nbsp;&nbsp;<br/><br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A:&nbsp;&nbsp;&nbsp;<input type="date" th:value = "${dateEnd}" class="data-pren"/>&nbsp;&nbsp;&nbsp;
             <input type="submit" id="button-prenotazione" name="prenota" value="Prenota">
             </div>
           </div>
