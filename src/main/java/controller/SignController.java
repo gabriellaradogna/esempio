@@ -58,4 +58,6 @@ public class SignController {
 		session.setAttribute("loggedUser", user);
 		return "redirect:/";
 	}
+	
+
 }

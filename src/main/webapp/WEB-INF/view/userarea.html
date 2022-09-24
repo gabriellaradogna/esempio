@@ -28,18 +28,18 @@
       </div>
       <div id="title">I tuoi dati personali:</div>
       <div id="boxdati">
-        <div class="fields">Nome:#</div>
-        <div class="fields">Cognome:#</div>
-        <div class="fields">Telefono:#</div>
-        <div class="fields">E-mail:#</div>
-        <div class="fields">Codice fiscale:#</div>
-        <div class="fields">Ragione sociale:#</div>
-        <div class="fields">Partita IVA:#</div>
-        <div class="fields">Indirizzo:#</div>
-        <div class="fields">Località:#</div>
-        <div class="fields">Provincia:#</div>
-        <div class="fields">Cap:#</div>
-        <div class="fields">Username:#</div>
+        <div class="fields"  th:text = "${loggedUser.first_name}"></div>
+        <div class="fields"  th:text = "${loggedUser.last_name}"></div>
+        <div class="fields"  th:text = "${loggedUser.telephone}"></div>
+        <div class="fields"  th:text = "${loggedUser.mail}"></div>
+        <div class="fields"  th:text = "${loggedUser.fiscal_code}"></div>
+        <div class="fields"  th:text = "${loggedUser.business_name}"></div>
+        <div class="fields"  th:text = "${loggedUser.vat_number}"></div>
+        <div class="fields"  th:text = "${loggedUser.address}"></div>
+        <div class="fields"  th:text = "${loggedUser.locality}"></div>
+        <div class="fields"  th:text = "${loggedUser.province}"></div>
+        <div class="fields"  th:text = "${loggedUser.postal_code}"></div>
+        <div class="fields"  th:text = "${loggedUser.username}"></div>
       </div>
     </aside>
 
@@ -56,7 +56,7 @@
 
       <gallery>
         <div id="viewrent">
-          <div id="benvenuto">Benvenuto/a nella tua area riservata #NomeUtente</div>
+          <div id="benvenuto" th:text="'Benvenuto/a nella tua area riservata ' + ${loggedUser.first_name}"></div>
           <div id="containercards">
             <div class="flashcards" id="noleggio">
               I miei noleggi
@@ -76,16 +76,16 @@
             </div>
             <div class="flashcards" id="logout">
               Logout
-              <a href="contatti"><img src="static/image/logout3.png" class="iconeutente"></a>
+              <a href="userarea/logout"><img src="static/image/logout3.png" class="iconeutente"></a>
             </div>
           </div>
          <!-- al click su modifica password-->
           <div id="passwordcontainer">
             <div id="containerpassword">
-              <form method="get" action="#">
-                <div class="password"><input type="password" class="fields1" required placeholder="Password attuale"></div>
-                <div class="password"><input type="password" class="fields1" required placeholder="Nuova Password"></div>
-                <div class="password"><input type="button" name="submit" class="fields1" value="Aggiorna Password"></div>
+              <form method="post" action="userarea/modpw">
+                <div class="password"><input type="password" class="fields1" name= "pw1" required placeholder="Password attuale"></div>
+                <div class="password"><input type="password" class="fields1" name= "pw2" required placeholder="Nuova Password"></div>
+                <div class="password"><input type="submit" name="submit" class="fields1" value="Aggiorna Password"></div>
               </form>
             </div>
           </div>
@@ -94,36 +94,36 @@
           <div id="containerregistrationform">
             <div id="formregistration">
               <div class="subtitle1">Dati anagrafici:</div>
-              <form method="post" action="/signin">
+              <form method="post" action="userarea/mod">
                 <div id="firstcontainer">
-                  <div class="form2"><input type="text" name="nome" class="fields1" required placeholder="Nome"></div>
-                  <div class="form2"><input type="text" name="cognome" class="fields1" required placeholder="Cognome"></div>
-                  <div class="form2"><input type="text" name="telefono" class="fields1" required placeholder="Telefono"></div>
-                  <div class="form2"><input type="text" name="email"  class="fields1"required placeholder="E-mail"></div>
+                  <div class="form2"><input type="text" name="nome" class="fields1" required th:value="${loggedUser.first_name}"></div>
+                  <div class="form2"><input type="text" name="cognome" class="fields1" required th:value="${loggedUser.last_name}"></div>
+                  <div class="form2"><input type="text" name="telefono" class="fields1" required th:value="${loggedUser.telephone}"></div>
+                  <div class="form2"><input type="text" name="email"  class="fields1"required th:value="${loggedUser.mail}"></div>
                 </div>
 
                 <div class="subtitle1">Sei un'azienda?
                   <input type="radio" name="genere" id="yes"/>Sì
                   <input type="radio" name="genere" id="no"/>No
                   <div id="thirdcontainer">
-                    <div id="form4"><input type="text" name="codice_fiscale" class="fields1" required placeholder="Codice fiscale">
+                    <div id="form4"><input type="text" name="codice_fiscale" class="fields1" required th:value="${loggedUser.fiscal_code}">
                     </div>
                   </div>
                 </div>
                 <div id="secondcontainer">
-                  <div class="form2"><input type="text" name="ragione_sociale" class="fields1" placeholder="Ragione sociale"></div>
-                  <div class="form2"><input type="text" name="partita_iva" class="fields1"  placeholder="Partita IVA"></div>
+                  <div class="form2"><input type="text" name="ragione_sociale" class="fields1" th:value="${loggedUser.business_name}"></div>
+                  <div class="form2"><input type="text" name="partita_iva" class="fields1"  th:value="${loggedUser.vat_number}"></div>
                 </div>
                 <div class="subtitle1">Indirizzo di recapito:</div>
                 <div id="fourcontainer">
-                  <div class="form2"><input type="text" name="indirizzo" class="fields1" required placeholder="Indirizzo"></div>
-                  <div class="form2"><input type="text" name="localita" class="fields1" required placeholder="Località"></div>
-                  <div class="form2"><input type="text" name="provincia" class="fields1"  required placeholder="Provincia"></div>
-                  <div class="form2"><input type="text" name="cap" class="fields1" required placeholder="Cap"></div>
+                  <div class="form2"><input type="text" name="indirizzo" class="fields1" required th:value="${loggedUser.address}"></div>
+                  <div class="form2"><input type="text" name="localita" class="fields1" required th:value="${loggedUser.locality}"></div>
+                  <div class="form2"><input type="text" name="provincia" class="fields1"  required th:value="${loggedUser.province}"></div>
+                  <div class="form2"><input type="text" name="cap" class="fields1" required th:value="${loggedUser.postal_code}"></div>
                 </div>
                 <div class="subtitle1">Credenziali utente:</div>
                 <div id="fivecontainer">
-                  <div class="form2"><input type="text" name="username" class="fields1" required placeholder="Nuovo username"></div>
+                  <div class="form2"><input type="text" name="username" class="fields1" required th:value="${loggedUser.username}"></div>
                 </div>
                 <div class="form2"><input type="submit" name="submit" class="fields1" value="Aggiorna dati"></div>
               </form>
