@@ -123,6 +123,14 @@ public class User implements Serializable {
 	private List<RentalCars> rentalCars;
 	
 
+	public List<RentalCars> getRentalCars() {
+		return rentalCars;
+	}
+
+	public void setRentalCars(List<RentalCars> rentalCars) {
+		this.rentalCars = rentalCars;
+	}
+
 	public int getId_user() {
 		return id_user;
 	}

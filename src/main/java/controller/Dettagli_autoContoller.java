@@ -66,11 +66,16 @@ public class Dettagli_autoContoller {
 		RentalCars rC = new RentalCars();
 		Car car = carService.getById(idCar);
 		User user = (User)session.getAttribute("loggedUser");
+		
+		if(carService.checkDate(car, dateStart, dateEnd))
+			{
 		rC.setCar(car);
 		rC.setUser(user);
 		rC.setRental_start(dateStart);
 		rC.setRental_end(dateEnd);
-		
+			}else {
+				return "redirect:/dettagli?idCar="+idCar+"&pe";
+			}
 		System.out.println(rC.toString());
 		rentalCarsDao.save(rC);
 		return "redirect:/home";

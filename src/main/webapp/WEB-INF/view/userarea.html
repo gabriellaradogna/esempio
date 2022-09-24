@@ -133,18 +133,18 @@
           <!-- al click su i mei noleggi-->
 
             <div id="containerimgauto">
-              <img src="#" id="autoUser">
+              <img th:src="@{'/static/icon/'+${rental.car.id_car} + '.png'}" id="autoUser">
             </div>
             <div id="containerdettagli">
               <div id="sub">Riepilogo del noleggio</div><br/>
-              <div style="float: left">Nome:</div><div class="fieldscar">Nome</div><br/>
-              <div style="float: left">Cognome:</div><div class="fieldscar">Cognome</div><br/>
-              <div style="float: left">Codice noleggio:</div><div class="fieldscar">Codice noleggio</div><br/>
-              <div style="float: left">Marca:</div><div class="fieldscar">Marca</div><br/>
-              <div style="float: left">Modello:</div><div class="fieldscar">Modello</div><br/>
-              <div style="float: left">Data di inizio:</div><div class="fieldscar">Data di inizio</div><br/>
-              <div style="float: left">Data di fine:</div><div class="fieldscar">Data di fine</div><br/>
-              <div style="float: left">Totale:</div><div class="fieldscar">Totale</div><br/>
+              <div style="float: left">Nome:</div><div class="fieldscar" th:text = "${rental.user.first_name}"></div><br/>
+              <div style="float: left">Cognome:</div><div class="fieldscar" th:text = "${rental.user.last_name}"></div><br/>
+              <div style="float: left">Codice noleggio:</div><div class="fieldscar" th:text = "${rental.id_rental}"></div><br/>
+              <div style="float: left">Marca:</div><div class="fieldscar" th:text = "${rental.car.brand}"></div><br/>
+              <div style="float: left">Modello:</div><div class="fieldscar" th:text = "${rental.car.model}"></div><br/>
+              <div style="float: left">Data di inizio:</div><div class="fieldscar" th:text = "${rental.rental_start}"></div><br/>
+              <div style="float: left">Data di fine:</div><div class="fieldscar" th:text = "${rental.rental_end}"></div><br/>
+              <div style="float: left">Totale:</div><div class="fieldscar" th:text = "${rental.total_price}"></div><br/>
               <button type="button" class="btn btn-outline-danger">Elimina prenotazione</button><br/><br/>
             </div>
         </div>

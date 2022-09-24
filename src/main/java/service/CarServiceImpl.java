@@ -68,4 +68,28 @@ public class CarServiceImpl implements CarService{
 		return car;
 	}
 
+	@Override
+	public boolean checkDate(Car car, Date dateStart, Date dateEnd) {
+		boolean disponibile = true;
+		List<RentalCars> prenotazioni = car.getRentalCars();
+		for(RentalCars rc : prenotazioni) {
+				if(dateStart.compareTo(rc.getRental_start())>=0) 
+				{
+							if(dateStart.compareTo(rc.getRental_end())<=0) {
+								disponibile = false;
+								return disponibile;
+							}
+							}else if(dateStart.compareTo(rc.getRental_start())<=0) 
+								{
+								if(dateEnd.compareTo(rc.getRental_start()) >=0) 
+									{
+									disponibile = false;
+									return disponibile;
+									}
+							}
+		
+	}
+		return disponibile;
+	}
 }
+				

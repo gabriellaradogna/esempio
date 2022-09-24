@@ -25,7 +25,9 @@ public class UserAreaController {
 		if(session.getAttribute("loggedUser") == null)
 			return "redirect:/sign";
 		model.addAttribute("loggedUser", session.getAttribute("loggedUser"));
+		User u = (User) session.getAttribute("loggedUser");
 		
+		model.addAttribute("rental", u.getRentalCars().get(0));
 		
 		return "userarea";
 		
