@@ -145,7 +145,7 @@
               <div style="float: left">Data di inizio:</div><div class="fieldscar" th:text = "${rental.rental_start}"></div><br/>
               <div style="float: left">Data di fine:</div><div class="fieldscar" th:text = "${rental.rental_end}"></div><br/>
               <div style="float: left">Totale:</div><div class="fieldscar" th:text = "${rental.total_price}"></div><br/>
-              <button type="button" class="btn btn-outline-danger">Elimina prenotazione</button><br/><br/>
+              <a type="button" th:href="@{'userarea/del?idPren=' + ${rental.id_rental}}" class="btn btn-outline-danger">Elimina prenotazione</a><br/><br/>
             </div>
         </div>
 

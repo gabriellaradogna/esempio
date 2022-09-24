@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import dao.RentalCarsDao;
 import dao.UserDao;
+import model.RentalCars;
 import model.User;
 
 @Controller
@@ -20,14 +22,18 @@ public class UserAreaController {
 	@Autowired
 	UserDao userDao;
 	
+	@Autowired
+	RentalCarsDao rentalCarsDao;
+	
 	@GetMapping
 	public String getPage(HttpSession session, Model model) {
 		if(session.getAttribute("loggedUser") == null)
 			return "redirect:/sign";
 		model.addAttribute("loggedUser", session.getAttribute("loggedUser"));
 		User u = (User) session.getAttribute("loggedUser");
-		
-		model.addAttribute("rental", u.getRentalCars().get(0));
+		if(u.getRentalCars()!=null)
+			System.out.println(u.getRentalCars());
+			//model.addAttribute("rental", u.getRentalCars().get(0));
 		
 		return "userarea";
 		
@@ -80,6 +86,17 @@ public class UserAreaController {
 			u.setPassword(pw2);
 			userDao.save(u); 
 		}
+		return "redirect:/userarea";
+	}
+	
+	@GetMapping("/del")
+	public String del(HttpSession session,Model model, @RequestParam("idPren") Integer id_rental) {
+
+		
+		
+		rentalCarsDao.deleteById(id_rental);
+		rentalCarsDao.flush();
+		
 		return "redirect:/userarea";
 	}
 	
