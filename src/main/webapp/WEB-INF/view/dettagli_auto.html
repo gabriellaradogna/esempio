@@ -37,12 +37,12 @@
           <h2 class="aside_h2">Date</h2>
           <span class="span_date">da</span>&nbsp;&nbsp;
           <input type="date" class="date" name="dateStart"
-                 value="2022-09-18"
-                 min="2022-09-19" max="2024-12-31"></br>
+                 th:value= "${todayDate}"
+                 th:min="${todayDate}" max="2024-12-31"></br>
           <span class="span_date">a </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="date" class="date" name="dateEnd"
-                 value="2022-09-19"
-                 min="2022-09-19" max="2024-12-31">
+                 th:value= "${todayDate}"
+                 th:min="${todayDate}" max="2024-12-31">
           </br>
           </br>
           <h2 class="aside_h2">Alimentazione</h2>
@@ -140,14 +140,16 @@
               <div><img src="static/image/icons8-fiat-500.gif" class="img-fluid car"/>&nbsp;<span class="text_dettagli" th:text="'Numero porte: ' + ${car.numberDoors}"></span></div>
             </div>
           </div>
-          <div class="col-sm-12 col-md-5 col-lg-5 col-xl-5 col-12 d-inline-flex justify-content-center m-auto mt-5">
+          <div class="col-sm-12 col-md-5 col-lg-5 col-xl-5 col-12 d-inline-flex justify-content-center m-auto mt-5 disponibilità">
             <div id="disponibilità"><p id="title_disponibilità">Verifica la disponibilità:<br/></p>
-            <form th:action="'dettagli/pren?idCar=' + ${car.id_car}" method = "post">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Da: <input type="date" th:value = "${dateStart}" name = dateStart class="data-pren"/>&nbsp;&nbsp;&nbsp;<br/><br/>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A:&nbsp;&nbsp;&nbsp;<input type="date" th:value = "${dateEnd}" name = dateEnd class="data-pren"/>&nbsp;&nbsp;&nbsp;
-            <input type="submit" id="button-prenotazione" name="prenota" value="Prenota">
+            <form id="form-disp" th:action="'dettagli/pren?idCar=' + ${car.id_car}" method = "post">
+              <p>Da: <input type="date" th:value = "${dateStart}" name = dateStart class="data-pren"/></p>
+              <p>A:&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" th:value = "${dateEnd}" name = dateEnd class="data-pren"/></p>
+            <input type="submit" id="button-prenotazione" name="prenota" value="Prenota">    
             </form>
             </div>
+       		<div id="esito-pe" th:if="${param.pe !=null}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attenzione! </br> Le date inserite sono occupate!</div>
+       		<div id="esito-pc" th:if="${param.pc !=null}">Prenotazione effettuata con </br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;successo!</div>
           </div>
         </div>
       </gallery>

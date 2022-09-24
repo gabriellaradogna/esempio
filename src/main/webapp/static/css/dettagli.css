@@ -242,9 +242,13 @@ footer{
 .riga_footer{
   margin-top: 10px;
 }
-.m_auto{
-	padding-top:0px;
+.mt-5 {
+    margin-top: 1.5rem!important;
 }
+
+/*.m_auto{
+	padding-top:0px;
+}*/
 .img-dettagli{
 	max-width: 100%;
 	height: auto;
@@ -277,6 +281,7 @@ footer{
   border-radius: 20px;
   margin-left: 5%;
   font-size: 22px;
+  border: 2px solid black;
 }
 .data-pren{
   border-radius: 15px;
@@ -287,6 +292,18 @@ footer{
   border-radius: 20px;
   margin-left: 5%;
   font-size: 22px;
+}
+#esito-pe{
+	margin-top: 20px;
+	color: red;
+    font-size: 31px;
+    text-align: left;
+}
+#esito-pc{
+	margin-top: 20px;
+	color: green;
+    font-size: 31px;
+    text-align: left;
 }
 /*.dati:focus{
   border: 2px solid black;
@@ -300,6 +317,13 @@ footer{
 	font-family: Barlow;
 	
 }
+#form-disp{
+	padding-left:10%;
+}
+.disponibilità{
+	flex-direction: column;
+	padding-left: 80px;
+}
 #button-prenotazione{
 border-radius: 20px;
 text-align: center;
@@ -308,8 +332,7 @@ text-align: center;
   float: left;
   width: auto;
   padding: 0px 20px 4px 20px;
-  margin: 6%;
-  margin-left:35%;
+  margin-left:17%;
   background-color: black;
   color: white
 }
