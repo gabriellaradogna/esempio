@@ -309,6 +309,11 @@ gallery {
   text-align: center; /*è per l'immagine vedi che fa*/
 
 }
+#autoUser{
+	max-width: 100%;
+height: auto;
+padding-top: 20%;
+}
 
 #containerdettagli {
   margin-left: 50px;
