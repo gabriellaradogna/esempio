@@ -65,8 +65,13 @@ public class Dettagli_autoContoller {
 			@RequestParam("dateEnd") Date dateEnd) {
 		RentalCars rC = new RentalCars();
 		Car car = carService.getById(idCar);
-		User user = (User)session.getAttribute("loggedUser");
 		
+		
+		if(session.getAttribute("loggedUser")==null)
+		{
+			return "redirect:/dettagli?idCar="+idCar+"&ue";
+		}
+		User user = (User)session.getAttribute("loggedUser");
 		if(carService.checkDate(car, dateStart, dateEnd))
 			{
 		rC.setCar(car);
