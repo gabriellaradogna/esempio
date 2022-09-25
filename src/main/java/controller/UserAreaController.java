@@ -33,7 +33,7 @@ public class UserAreaController {
 		User u = (User) session.getAttribute("loggedUser");
 		if(u.getRentalCars()!=null)
 			System.out.println(u.getRentalCars());
-			//model.addAttribute("rental", u.getRentalCars().get(0));
+			model.addAttribute("rental", u.getRentalCars().get(0));
 		
 		return "userarea";
 		
