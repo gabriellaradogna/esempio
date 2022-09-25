@@ -4,6 +4,7 @@ package controller;
 
 import java.sql.Date;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -46,6 +47,7 @@ public class IndexController {
 		List<Car> cars;
 		cars = carDao.findAll();
 		
+		
 		java.util.Date tD = new java.util.Date();
 		String todayDate = new SimpleDateFormat("yyyy-MM-dd").format(tD);
 		
@@ -75,14 +77,17 @@ public class IndexController {
 		else if(category != null && numberDoors != null && powerSupply == null)
 			cars = carDao.findByCategoryAndNumberDoorsIn(category, numberDoors);
 		
+		
 		carService.filterByPrice(cars, price);
 			 
 		carService.filterByDate(cars, dateStart, dateEnd);
-			
+		
+		cars.remove(cars.size()-1);
+		
 	    model.addAttribute("cars", cars);
 	    if(dateStart != null && dateEnd != null) {
-	    session.setAttribute("dateStart", dateStart);
-	    session.setAttribute("dateEnd", dateEnd);
+	    	session.setAttribute("dateStart", dateStart);
+	    	session.setAttribute("dateEnd", dateEnd);
 	    }else {
 	    	session.setAttribute("dateStart", todayDate);
 	    	session.setAttribute("dateEnd", todayDate);

@@ -73,12 +73,12 @@ public class Dettagli_autoContoller {
 		rC.setUser(user);
 		rC.setRental_start(dateStart);
 		rC.setRental_end(dateEnd);
+		rentalCarsDao.saveAndFlush(rC);
+		
+		return "redirect:/dettagli?idCar="+idCar+"&pc";
 			}else {
 				return "redirect:/dettagli?idCar="+idCar+"&pe";
 			}
-		System.out.println(rC.toString());
-		rentalCarsDao.save(rC);
-		return "redirect:/home";
 	}
 	
 }

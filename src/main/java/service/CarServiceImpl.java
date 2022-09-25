@@ -57,7 +57,7 @@ public class CarServiceImpl implements CarService{
 				}
 			}
 		}
-		System.out.println(carsDate);
+	
 		cars.removeAll(carsDate);
 		return cars;
 	}

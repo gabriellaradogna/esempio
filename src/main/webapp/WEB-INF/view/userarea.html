@@ -132,10 +132,10 @@
 
           <!-- al click su i mei noleggi-->
 
-            <div id="containerimgauto">
+            <div id="containerimgauto" th:if="${modifica}">
               <img th:src="@{'/static/icon/'+${rental.car.id_car} + '.png'}" id="autoUser">
             </div>
-            <div id="containerdettagli">
+            <div id="containerdettagli" th:if="${modifica}">
               <div id="sub">Riepilogo del noleggio</div><br/>
               <div style="float: left">Nome:</div><div class="fieldscar" th:text = "${rental.user.first_name}"></div><br/>
               <div style="float: left">Cognome:</div><div class="fieldscar" th:text = "${rental.user.last_name}"></div><br/>
@@ -147,6 +147,7 @@
               <div style="float: left">Totale:</div><div class="fieldscar" th:text = "${rental.total_price}"></div><br/>
               <a type="button" th:href="@{'userarea/del?idPren=' + ${rental.id_rental}}" class="btn btn-outline-danger">Elimina prenotazione</a><br/><br/>
             </div>
+            <div id = "containerdettagli" th:if="${!modifica}">Sembra che tu non abbia noleggi registrati!</div>
         </div>
 
       </gallery>

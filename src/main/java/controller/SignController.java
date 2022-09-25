@@ -4,6 +4,8 @@ package controller;
 
 
 
+import java.util.Date;
+
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -17,8 +19,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import dao.CarDao;
+import dao.RentalCarsDao;
 import dao.UserDao;
+import model.Car;
+import model.RentalCars;
 import model.User;
+import service.CarService;
 
 
 @Controller
@@ -27,6 +34,12 @@ public class SignController {
 	
 	@Autowired
 	UserDao userDao;
+	
+	@Autowired
+	CarService carService;
+	
+	@Autowired
+	RentalCarsDao rentalCarsDao;
 
 	@GetMapping
 	public String getPage(Model model, HttpSession session){
@@ -53,8 +66,18 @@ public class SignController {
 	@PostMapping("/reg")
 	public String userProva(@Valid @ModelAttribute("user") User user, BindingResult result, HttpSession session )
 	{
-		System.out.println(user.getFirst_name());
+		
+		if(result.hasErrors()) {
+			return "redirect:/sign?re";
+		}
+		RentalCars rc = new RentalCars();
+		Car c = carService.getById(25);
 		userDao.save(user);
+		rc.setCar(c);
+		rc.setUser(user);
+		rc.setRental_end(new java.sql.Date(System.currentTimeMillis()));
+		rc.setRental_start(new java.sql.Date(System.currentTimeMillis()));
+		rentalCarsDao.saveAndFlush(rc);
 		session.setAttribute("loggedUser", user);
 		return "redirect:/";
 	}

@@ -43,6 +43,7 @@
             </div>
             <div class="form1"><h1 id="question">Non sei registrato?</h1></div>
             <div id="newaccount"><input type="button" value="Crea un account" id="createaccount"></div>
+            <p th:if="${param.re != null}" class = "text-danger">C'è stato un errore nella registrazione!</p>
           </div>
 
           <div id="containerregistrationform">

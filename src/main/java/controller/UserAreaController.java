@@ -1,5 +1,7 @@
 package controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,16 +27,21 @@ public class UserAreaController {
 	@Autowired
 	RentalCarsDao rentalCarsDao;
 	
+	
 	@GetMapping
 	public String getPage(HttpSession session, Model model) {
 		if(session.getAttribute("loggedUser") == null)
 			return "redirect:/sign";
 		model.addAttribute("loggedUser", session.getAttribute("loggedUser"));
 		User u = (User) session.getAttribute("loggedUser");
-		if(u.getRentalCars()!=null)
-			System.out.println(u.getRentalCars());
-			model.addAttribute("rental", u.getRentalCars().get(0));
-		
+		List<RentalCars> lista = rentalCarsDao.findByUser(u);
+		RentalCars lastRC = lista.get(lista.size()-1); 
+		model.addAttribute("rental", lastRC);
+		if(lastRC.getCar().getId_car() == 25) {
+			model.addAttribute("modifica", false);
+		}else {
+			model.addAttribute("modifica", true);
+		}
 		return "userarea";
 		
 	}
@@ -96,7 +103,10 @@ public class UserAreaController {
 		
 		rentalCarsDao.deleteById(id_rental);
 		rentalCarsDao.flush();
-		
+		User u = (User) session.getAttribute("loggedUser");
+		List<RentalCars> lista = rentalCarsDao.findByUser(u);
+		RentalCars lastRC = lista.get(lista.size()-1); 
+		model.addAttribute("rental", lastRC);
 		return "redirect:/userarea";
 	}
 	
