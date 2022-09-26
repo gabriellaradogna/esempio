@@ -99,8 +99,6 @@ public class UserAreaController {
 	@GetMapping("/del")
 	public String del(HttpSession session,Model model, @RequestParam("idPren") Integer id_rental) {
 
-		
-		
 		rentalCarsDao.deleteById(id_rental);
 		rentalCarsDao.flush();
 		User u = (User) session.getAttribute("loggedUser");

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Set 19, 2022 alle 16:50
+-- Creato il: Set 26, 2022 alle 09:57
 -- Versione del server: 10.4.24-MariaDB
 -- Versione PHP: 8.1.6
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `negoziami`
 --
-CREATE DATABASE IF NOT EXISTS `negoziami` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `negoziami`;
 
 -- --------------------------------------------------------
 
@@ -69,7 +67,8 @@ INSERT INTO `cars` (`id_car`, `model`, `brand`, `category`, `power_supply`, `dis
 (21, 'HR-V', 'Honda', 'Suv', 'Full Hybrid', '1.6', '5', 'Bianco', 305.00),
 (22, 'Puma', 'Ford', 'Suv', 'Ibrida', '1.0', '5', 'Blu celeste', 315.00),
 (23, 'Kamiq', 'Skoda', 'Suv', 'Diesel', '1.6 Tdi', '5', 'Bianco', 329.00),
-(24, 'Cayenne', 'Porsche', 'Suv', 'Benzina', '3.0', '5', 'Nero', 405.00);
+(24, 'Cayenne', 'Porsche', 'Suv', 'Benzina', '3.0', '5', 'Nero', 405.00),
+(25, '0', '0', '0', '0', '0', '0', '0', 0.00);
 
 -- --------------------------------------------------------
 
@@ -91,7 +90,14 @@ CREATE TABLE `rental_cars` (
 --
 
 INSERT INTO `rental_cars` (`id_rental`, `id_user`, `id_car`, `rental_start`, `rental_end`, `total_price`) VALUES
-(1, 3, 14, '2022-09-15', '2022-09-17', NULL);
+(2, 1, 1, '2022-09-30', '2022-10-03', 20.00),
+(10, 2, 25, '1990-01-01', '2100-01-01', 0.00),
+(15, 10, 25, '2022-09-25', '2022-09-25', 0.00),
+(17, NULL, 1, '2022-11-03', '2022-11-04', 0.00),
+(18, NULL, 5, '2022-09-25', '2022-09-25', 0.00),
+(19, NULL, 7, '2022-09-25', '2022-09-25', 0.00),
+(20, NULL, 11, '2022-09-25', '2022-09-25', 0.00),
+(22, 11, 25, '2022-09-26', '2022-09-26', 0.00);
 
 -- --------------------------------------------------------
 
@@ -125,7 +131,13 @@ INSERT INTO `users` (`id_user`, `first_name`, `last_name`, `fiscal_code`, `telep
 (2, 'Giuseppe', 'Bianchi', 'BNCGPP00D22F839B', '3210457698', NULL, 'Via dei Colombi, 78', 'Napoli', 'NA', '80100', NULL, NULL, 'Peppe33', 'password00'),
 (3, 'Carla', 'Neri', 'NRECRL70P28H501Y', '3784569803', NULL, 'Via dei Partigiani, 18', 'Roma', 'RM', '00010', 'CarServ S.r.l', '07643520567', NULL, NULL),
 (4, 'Paola', 'Gialli', 'GLLPLA83M41C352I', '3215648795', NULL, 'Via dei Serpenti, 65', 'Bari', 'BA', '70126', NULL, NULL, NULL, NULL),
-(5, 'Gennaro', 'Savastano', 'SVSGNR76M09F839Q', '3485760917', NULL, 'Via Furiosi, 65', 'Napoli', 'NA', '80100', NULL, NULL, NULL, NULL);
+(5, 'Gennaro', 'Savastano', 'SVSGNR76M09F839Q', '3485760917', NULL, 'Via Furiosi, 65', 'Napoli', 'NA', '80100', NULL, NULL, NULL, NULL),
+(6, 'Marco', 'Alzetta2', 'jkfldm45lcvk4', '3465215462', 'maildiprova@gmail.com', 'asd', 'asd', 'as', '45512', '', '', 'userAlz', 'pwAlz'),
+(7, 'Marco', 'Alzetta', 'jkfldm45lcvk4', 'asdd', 'maildiprova@gmail.com', 'asd', 'asd', 'as', '45512', '', '', 'sd', 'dddd'),
+(8, 'Prova', 'ProvaC', 'jkfldm45lcvhh', '3dsfksldk', 'mail@mail', 'asd', 'asd', 'as', '45512', '', '', 'useruser', 'pwpw'),
+(9, 'Prova', 'ProvaC', 'jkfldm45lcvhh', 'asdd', 'maildiprova@gmail.com', 'asd', 'asd', 'as', '45512', '', '', 'zz', 'zz'),
+(10, 'Prova', 'ProvaC', 'jkfldm45lcvk4', '3465215462', 'dd', 'asd', 'asd', 'dd', 'dd', '', '', 'dd', 'dd'),
+(11, 'Marco', 'Alzetta', 'jkfldm45lcvk4', '3465215462', 'maildiprova@gmail.com', 'Via', 'Rossini', 'TV', '31551', '', '', 'userDemo', 'passwordDemo');
 
 --
 -- Indici per le tabelle scaricate
@@ -159,19 +171,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT per la tabella `cars`
 --
 ALTER TABLE `cars`
-  MODIFY `id_car` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id_car` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT per la tabella `rental_cars`
 --
 ALTER TABLE `rental_cars`
-  MODIFY `id_rental` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_rental` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT per la tabella `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Limiti per le tabelle scaricate
@@ -181,8 +193,8 @@ ALTER TABLE `users`
 -- Limiti per la tabella `rental_cars`
 --
 ALTER TABLE `rental_cars`
-  ADD CONSTRAINT `id_car` FOREIGN KEY (`id_car`) REFERENCES `cars` (`id_car`),
-  ADD CONSTRAINT `id_user` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`);
+  ADD CONSTRAINT `id_car` FOREIGN KEY (`id_car`) REFERENCES `cars` (`id_car`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `id_user` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

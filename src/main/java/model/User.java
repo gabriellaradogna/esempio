@@ -65,7 +65,7 @@ public class User implements Serializable {
 	@Column(name = "last_name")
 	private String last_name;
 	
-	@Pattern(regexp = "[a-zA-Z]{6}\\d{2}[ABCDEHLMPRSTabcdehlmprst]\\d{2}[a-zA-Z]\\d{3}[a-zA-Z]", message = "{error.invalidtaxcode}")
+	//@Pattern(regexp = "[a-zA-Z]{6}\\d{2}[ABCDEHLMPRSTabcdehlmprst]\\d{2}[a-zA-Z]\\d{3}[a-zA-Z]", message = "{error.invalidtaxcode}")
 	@Column
 	private String fiscal_code;
 	
@@ -84,38 +84,38 @@ public class User implements Serializable {
 		this.mail = mail;
 	}
 
-	@Pattern(regexp = "[a-zA-Z0-9\\s'àèìòù.-]{1,255}", message = "{error.charsnotallow}")
+	//@Pattern(regexp = "[a-zA-Z0-9\\s'àèìòù.-]{1,255}", message = "{error.charsnotallow}")
 	@Column
 	private String address;
 	
-	@Pattern(regexp = "[a-zA-Z0-9\\s'àèìòù.-]{1,255}", message = "{error.charsnotallow}")
+	//@Pattern(regexp = "[a-zA-Z0-9\\s'àèìòù.-]{1,255}", message = "{error.charsnotallow}")
 	@Column
 	private String locality;
 	
 	
-	@Pattern(regexp = "[a-zA-Z]{2}", message = "{error.charsnotallow}")
+	//@Pattern(regexp = "[a-zA-Z]{2}", message = "{error.charsnotallow}")
 	@Column
 	private String province; 
 	
-	@Pattern(regexp = "[0-9]{5}", message = "{error.invalidcap}") //discutibile, perchè ho controllato all'estero 
+	//@Pattern(regexp = "[0-9]{5}", message = "{error.invalidcap}") //discutibile, perchè ho controllato all'estero 
 	//ed hanno numeri che vanno da 4 a 8..
 	@Column
 	private String postal_code;
 	
-	@Pattern(regexp = "[a-zA-Z0-9\\s'àèìòù.-]{1,255}", message = "{error.charsnotallow}")
+	//@Pattern(regexp = "[a-zA-Z0-9\\s'àèìòù.-]{1,255}", message = "{error.charsnotallow}")
 	private String business_name;
 	
 	
-	@Pattern (regexp = "/^BE0[0-9]{3}[.]?[0-9]{3}[.]?[0-9]{3}$/", message = "{error.charsnotallow}")
+	//@Pattern (regexp = "/^BE0[0-9]{3}[.]?[0-9]{3}[.]?[0-9]{3}$/", message = "{error.charsnotallow}")
 	@Column
 	private String vat_number;
 	
-	@Pattern(regexp = "(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{1,255}", message = "{error.charsnotallow}")
+	//@Pattern(regexp = "(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{1,255}", message = "{error.charsnotallow}")
 	@Column
 	private String username;
 	
 
-	@Pattern(regexp = "(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,20}", message = "{error.notsecurepassword}")
+	//@Pattern(regexp = "(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,20}", message = "{error.notsecurepassword}")
 	@Column
 	private String password; 
 	
