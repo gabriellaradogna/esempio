@@ -218,7 +218,13 @@ gallery {
   padding-left: 20px;
   padding-right: 20px;
 }
-
+#no-pass{
+   	text-align: center;
+    font-family: Barlow;
+    font-size: 26px;
+    margin-top: 10px;
+    color: red;
+}
 #question {
   font-size: 25px;
   font-weight: bold;
