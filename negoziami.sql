@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Set 26, 2022 alle 09:57
+-- Creato il: Set 26, 2022 alle 12:06
 -- Versione del server: 10.4.24-MariaDB
 -- Versione PHP: 8.1.6
 
@@ -82,7 +82,7 @@ CREATE TABLE `rental_cars` (
   `id_car` int(11) DEFAULT NULL,
   `rental_start` date DEFAULT NULL,
   `rental_end` date DEFAULT NULL,
-  `total_price` double(4,2) DEFAULT NULL
+  `total_price` double(6,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -97,7 +97,10 @@ INSERT INTO `rental_cars` (`id_rental`, `id_user`, `id_car`, `rental_start`, `re
 (18, NULL, 5, '2022-09-25', '2022-09-25', 0.00),
 (19, NULL, 7, '2022-09-25', '2022-09-25', 0.00),
 (20, NULL, 11, '2022-09-25', '2022-09-25', 0.00),
-(22, 11, 25, '2022-09-26', '2022-09-26', 0.00);
+(22, 11, 25, '2022-09-26', '2022-09-26', 0.00),
+(26, 11, 5, '2022-09-26', '2022-09-27', 700.00),
+(27, 12, 25, '2022-09-26', '2022-09-26', 0.00),
+(29, 13, 25, '2022-09-26', '2022-09-26', 0.00);
 
 -- --------------------------------------------------------
 
@@ -137,7 +140,9 @@ INSERT INTO `users` (`id_user`, `first_name`, `last_name`, `fiscal_code`, `telep
 (8, 'Prova', 'ProvaC', 'jkfldm45lcvhh', '3dsfksldk', 'mail@mail', 'asd', 'asd', 'as', '45512', '', '', 'useruser', 'pwpw'),
 (9, 'Prova', 'ProvaC', 'jkfldm45lcvhh', 'asdd', 'maildiprova@gmail.com', 'asd', 'asd', 'as', '45512', '', '', 'zz', 'zz'),
 (10, 'Prova', 'ProvaC', 'jkfldm45lcvk4', '3465215462', 'dd', 'asd', 'asd', 'dd', 'dd', '', '', 'dd', 'dd'),
-(11, 'Marco', 'Alzetta', 'jkfldm45lcvk4', '3465215462', 'maildiprova@gmail.com', 'Via', 'Rossini', 'TV', '31551', '', '', 'userDemo', 'passwordDemo');
+(11, 'Marco', 'Alzetta', 'jkfldm45lcvk4', '3465215462', 'maildiprova@gmail.com', 'Via', 'Rossini', 'TV', '31551', '', '', 'userDemo', 'passwordDemo'),
+(12, 'Marco', 'Alzetta', 'jkfldm45lcvk4', '3465215462', 'maildiprova@gmail.com', 'Via', 'Rossini', 'TV', '45512', '', '', 'userDemo1', 'pwDemo1'),
+(13, 'Marco', 'Alzetta', 'jkfldm45lcvk4', '3465215462', 'maildiprova@gmail.com', 'Via', 'Rossini', 'TV', '45512', '', '', 'userDemo', 'pwDemo1');
 
 --
 -- Indici per le tabelle scaricate
@@ -177,13 +182,13 @@ ALTER TABLE `cars`
 -- AUTO_INCREMENT per la tabella `rental_cars`
 --
 ALTER TABLE `rental_cars`
-  MODIFY `id_rental` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_rental` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT per la tabella `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Limiti per le tabelle scaricate
