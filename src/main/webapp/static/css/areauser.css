@@ -307,7 +307,7 @@ gallery {
   margin-left:370px;
   display: none;
   text-align: center; /*è per l'immagine vedi che fa*/
-
+	border-radius: 20px;
 }
 #autoUser{
 	max-width: 100%;
@@ -328,7 +328,19 @@ padding-top: 20%;
   line-height: 130%;
   padding-right:300px;
 }
-
+/*#no-noleggi{
+	    font-family: Barlow;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 30px;
+    display: none;
+    text-align: center;
+    line-height: 130%;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: 1.5px solid black;
+    border-radius: 20px;
+}*/
 #sub {
   font-size: 30px;
   font-weight: bold;
@@ -441,4 +453,8 @@ footer{
 
 
 }
-
+.btn-outline-danger {
+    color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 20px;
+}

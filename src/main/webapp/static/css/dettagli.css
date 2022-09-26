@@ -297,12 +297,21 @@ footer{
 	color: red;
     font-size: 31px;
     text-align: left;
+    padding-left: 34px;
 }
 #esito-pc{
 	margin-top: 20px;
 	color: green;
     font-size: 31px;
-    text-align: left;
+    text-align: center;
+    padding-right: 120px;
+}
+#esito-ue{
+	margin-top: 20px;
+	color: gray;
+    font-size: 31px;
+    text-align: center;
+    padding-right: 85px;
 }
 /*.dati:focus{
   border: 2px solid black;
@@ -314,6 +323,7 @@ footer{
 #disponibilità{
 	font-size: 25px;
 	font-family: Barlow;
+	padding-left: 50px;
 	
 }
 #form-disp{
@@ -321,7 +331,7 @@ footer{
 }
 .disponibilità{
 	flex-direction: column;
-	padding-left: 80px;
+	padding-left: 40px;
 }
 #button-prenotazione{
 border-radius: 20px;
