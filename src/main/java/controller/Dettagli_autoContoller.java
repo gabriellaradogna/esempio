@@ -78,6 +78,9 @@ public class Dettagli_autoContoller {
 		rC.setUser(user);
 		rC.setRental_start(dateStart);
 		rC.setRental_end(dateEnd);
+		
+		long difference =  (dateEnd.getTime()-dateStart.getTime())/86400000;
+        rC.setTotal_price(car.getDailyPrice()*(difference+1));
 		rentalCarsDao.saveAndFlush(rC);
 		
 		return "redirect:/dettagli?idCar="+idCar+"&pc";
